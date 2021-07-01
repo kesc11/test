@@ -1,0 +1,2836 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1219.1533                               -->
+<workbook original-version='18.1' source-build='2018.3.2 (20183.18.1219.1533)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource inline='true' name='示例 - 超市' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection name='示例 - 超市leaf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/zhang/Documents/我的 Tableau 存储库/数据源/2018.3/zh_CN-China/示例 - 超市.xls' interpretationMode='0' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='示例 - 超市leaf' name='订单$' table='[订单$]' type='table'>
+          <columns gridOrigin='A1:T10001:no:A1:T10001:0' header='yes' outcome='6'>
+            <column datatype='integer' name='行 ID' ordinal='0' />
+            <column datatype='string' name='订单 ID' ordinal='1' />
+            <column datatype='date' name='订单日期' ordinal='2' />
+            <column datatype='date' name='发货日期' ordinal='3' />
+            <column datatype='string' name='邮寄方式' ordinal='4' />
+            <column datatype='string' name='客户 ID' ordinal='5' />
+            <column datatype='string' name='客户名称' ordinal='6' />
+            <column datatype='string' name='细分' ordinal='7' />
+            <column datatype='string' name='城市' ordinal='8' />
+            <column datatype='string' name='省/自治区' ordinal='9' />
+            <column datatype='string' name='国家' ordinal='10' />
+            <column datatype='string' name='地区' ordinal='11' />
+            <column datatype='string' name='产品 ID' ordinal='12' />
+            <column datatype='string' name='类别' ordinal='13' />
+            <column datatype='string' name='子类别' ordinal='14' />
+            <column datatype='string' name='产品名称' ordinal='15' />
+            <column datatype='real' name='销售额' ordinal='16' />
+            <column datatype='integer' name='数量' ordinal='17' />
+            <column datatype='real' name='折扣' ordinal='18' />
+            <column datatype='real' name='利润' ordinal='19' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>行 ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[行 ID]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>行 ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>订单 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[订单 ID]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>订单 ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>订单日期</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[订单日期]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>订单日期</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>发货日期</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[发货日期]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>发货日期</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>邮寄方式</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[邮寄方式]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>邮寄方式</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>客户 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[客户 ID]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>客户 ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>客户名称</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[客户名称]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>客户名称</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>细分</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[细分]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>细分</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>城市</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[城市]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>城市</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>省/自治区</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[省/自治区]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>省/自治区</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>国家</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[国家]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>国家</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地区</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[地区]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>地区</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>产品 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[产品 ID]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>产品 ID</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>类别</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[类别]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>类别</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>子类别</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[子类别]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>子类别</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>产品名称</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[产品名称]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>产品名称</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>销售额</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[销售额]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>销售额</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>数量</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[数量]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>数量</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>折扣</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[折扣]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>折扣</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利润</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[利润]</local-name>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias>利润</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[订单$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:T10001:no:A1:T10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='利润率' datatype='real' default-format='p0%' name='[Calculation_9711209092331208]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([利润])/SUM([销售额])' scope-isolation='false' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='产品 Id' datatype='string' hidden='true' name='[产品 ID]' role='dimension' type='nominal' />
+      <column caption='制造商' datatype='string' name='[产品名称 (group) 1]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[产品名称]' new-bin='true'>
+          <bin default-name='false' value='&quot;Acco&quot;'>
+            <value>&quot;Acco 标签, 回收&quot;</value>
+            <value>&quot;Acco 标签, 耐用&quot;</value>
+            <value>&quot;Acco 标签, 实惠&quot;</value>
+            <value>&quot;Acco 标签, 透明&quot;</value>
+            <value>&quot;Acco 打孔机, 回收&quot;</value>
+            <value>&quot;Acco 打孔机, 耐用&quot;</value>
+            <value>&quot;Acco 打孔机, 实惠&quot;</value>
+            <value>&quot;Acco 打孔机, 透明&quot;</value>
+            <value>&quot;Acco 订书机, 回收&quot;</value>
+            <value>&quot;Acco 订书机, 耐用&quot;</value>
+            <value>&quot;Acco 订书机, 实惠&quot;</value>
+            <value>&quot;Acco 订书机, 透明&quot;</value>
+            <value>&quot;Acco 孔加固材料, 回收&quot;</value>
+            <value>&quot;Acco 孔加固材料, 耐用&quot;</value>
+            <value>&quot;Acco 孔加固材料, 实惠&quot;</value>
+            <value>&quot;Acco 孔加固材料, 透明&quot;</value>
+            <value>&quot;Acco 装订机, 回收&quot;</value>
+            <value>&quot;Acco 装订机, 耐用&quot;</value>
+            <value>&quot;Acco 装订机, 实惠&quot;</value>
+            <value>&quot;Acco 装订机, 透明&quot;</value>
+            <value>&quot;Acco 装订机盖, 回收&quot;</value>
+            <value>&quot;Acco 装订机盖, 耐用&quot;</value>
+            <value>&quot;Acco 装订机盖, 实惠&quot;</value>
+            <value>&quot;Acco 装订机盖, 透明&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Accos&quot;'>
+            <value>&quot;Accos 按钉, 混合尺寸&quot;</value>
+            <value>&quot;Accos 按钉, 金属&quot;</value>
+            <value>&quot;Accos 按钉, 每包 12 个&quot;</value>
+            <value>&quot;Accos 按钉, 整包&quot;</value>
+            <value>&quot;Accos 订书钉, 混合尺寸&quot;</value>
+            <value>&quot;Accos 订书钉, 金属&quot;</value>
+            <value>&quot;Accos 订书钉, 每包 12 个&quot;</value>
+            <value>&quot;Accos 订书钉, 整包&quot;</value>
+            <value>&quot;Accos 回形针, 混合尺寸&quot;</value>
+            <value>&quot;Accos 回形针, 金属&quot;</value>
+            <value>&quot;Accos 回形针, 每包 12 个&quot;</value>
+            <value>&quot;Accos 回形针, 整包&quot;</value>
+            <value>&quot;Accos 夹子, 混合尺寸&quot;</value>
+            <value>&quot;Accos 夹子, 金属&quot;</value>
+            <value>&quot;Accos 夹子, 每包 12 个&quot;</value>
+            <value>&quot;Accos 夹子, 整包&quot;</value>
+            <value>&quot;Accos 图钉, 混合尺寸&quot;</value>
+            <value>&quot;Accos 图钉, 金属&quot;</value>
+            <value>&quot;Accos 图钉, 每包 12 个&quot;</value>
+            <value>&quot;Accos 图钉, 整包&quot;</value>
+            <value>&quot;Accos 橡皮筋, 混合尺寸&quot;</value>
+            <value>&quot;Accos 橡皮筋, 金属&quot;</value>
+            <value>&quot;Accos 橡皮筋, 每包 12 个&quot;</value>
+            <value>&quot;Accos 橡皮筋, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Acme&quot;'>
+            <value>&quot;Acme 尺子, 钢&quot;</value>
+            <value>&quot;Acme 尺子, 工业&quot;</value>
+            <value>&quot;Acme 尺子, 锯齿状&quot;</value>
+            <value>&quot;Acme 尺子, 蓝色&quot;</value>
+            <value>&quot;Acme 大剪刀, 钢&quot;</value>
+            <value>&quot;Acme 大剪刀, 工业&quot;</value>
+            <value>&quot;Acme 大剪刀, 锯齿状&quot;</value>
+            <value>&quot;Acme 大剪刀, 蓝色&quot;</value>
+            <value>&quot;Acme 剪刀, 钢&quot;</value>
+            <value>&quot;Acme 剪刀, 工业&quot;</value>
+            <value>&quot;Acme 剪刀, 锯齿状&quot;</value>
+            <value>&quot;Acme 剪刀, 蓝色&quot;</value>
+            <value>&quot;Acme 开信刀, 钢&quot;</value>
+            <value>&quot;Acme 开信刀, 工业&quot;</value>
+            <value>&quot;Acme 开信刀, 锯齿状&quot;</value>
+            <value>&quot;Acme 开信刀, 蓝色&quot;</value>
+            <value>&quot;Acme 美工刀, 钢&quot;</value>
+            <value>&quot;Acme 美工刀, 工业&quot;</value>
+            <value>&quot;Acme 美工刀, 锯齿状&quot;</value>
+            <value>&quot;Acme 美工刀, 蓝色&quot;</value>
+            <value>&quot;Acme 修剪器, 钢&quot;</value>
+            <value>&quot;Acme 修剪器, 工业&quot;</value>
+            <value>&quot;Acme 修剪器, 锯齿状&quot;</value>
+            <value>&quot;Acme 修剪器, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Advantus&quot;'>
+            <value>&quot;Advantus 按钉, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 按钉, 金属&quot;</value>
+            <value>&quot;Advantus 按钉, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 按钉, 整包&quot;</value>
+            <value>&quot;Advantus 灯泡, 黑色&quot;</value>
+            <value>&quot;Advantus 灯泡, 耐用&quot;</value>
+            <value>&quot;Advantus 灯泡, 一包多件&quot;</value>
+            <value>&quot;Advantus 灯泡, 优质&quot;</value>
+            <value>&quot;Advantus 订书钉, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 订书钉, 金属&quot;</value>
+            <value>&quot;Advantus 订书钉, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 订书钉, 整包&quot;</value>
+            <value>&quot;Advantus 分层置放架, 黑色&quot;</value>
+            <value>&quot;Advantus 分层置放架, 耐用&quot;</value>
+            <value>&quot;Advantus 分层置放架, 一包多件&quot;</value>
+            <value>&quot;Advantus 分层置放架, 优质&quot;</value>
+            <value>&quot;Advantus 回形针, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 回形针, 金属&quot;</value>
+            <value>&quot;Advantus 回形针, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 回形针, 整包&quot;</value>
+            <value>&quot;Advantus 夹子, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 夹子, 金属&quot;</value>
+            <value>&quot;Advantus 夹子, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 夹子, 整包&quot;</value>
+            <value>&quot;Advantus 框架, 黑色&quot;</value>
+            <value>&quot;Advantus 框架, 耐用&quot;</value>
+            <value>&quot;Advantus 框架, 一包多件&quot;</value>
+            <value>&quot;Advantus 框架, 优质&quot;</value>
+            <value>&quot;Advantus 门挡, 黑色&quot;</value>
+            <value>&quot;Advantus 门挡, 耐用&quot;</value>
+            <value>&quot;Advantus 门挡, 一包多件&quot;</value>
+            <value>&quot;Advantus 门挡, 优质&quot;</value>
+            <value>&quot;Advantus 闹钟, 黑色&quot;</value>
+            <value>&quot;Advantus 闹钟, 耐用&quot;</value>
+            <value>&quot;Advantus 闹钟, 一包多件&quot;</value>
+            <value>&quot;Advantus 闹钟, 优质&quot;</value>
+            <value>&quot;Advantus 图钉, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 图钉, 金属&quot;</value>
+            <value>&quot;Advantus 图钉, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 图钉, 整包&quot;</value>
+            <value>&quot;Advantus 相框, 黑色&quot;</value>
+            <value>&quot;Advantus 相框, 耐用&quot;</value>
+            <value>&quot;Advantus 相框, 一包多件&quot;</value>
+            <value>&quot;Advantus 相框, 优质&quot;</value>
+            <value>&quot;Advantus 橡皮筋, 混合尺寸&quot;</value>
+            <value>&quot;Advantus 橡皮筋, 金属&quot;</value>
+            <value>&quot;Advantus 橡皮筋, 每包 12 个&quot;</value>
+            <value>&quot;Advantus 橡皮筋, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Ames&quot;'>
+            <value>&quot;Ames 搭扣信封, 红色&quot;</value>
+            <value>&quot;Ames 搭扣信封, 回收&quot;</value>
+            <value>&quot;Ames 搭扣信封, 每套 50 个&quot;</value>
+            <value>&quot;Ames 搭扣信封, 银色&quot;</value>
+            <value>&quot;Ames 局间信封, 红色&quot;</value>
+            <value>&quot;Ames 局间信封, 回收&quot;</value>
+            <value>&quot;Ames 局间信封, 每套 50 个&quot;</value>
+            <value>&quot;Ames 局间信封, 银色&quot;</value>
+            <value>&quot;Ames 马尼拉纸信封, 红色&quot;</value>
+            <value>&quot;Ames 马尼拉纸信封, 回收&quot;</value>
+            <value>&quot;Ames 马尼拉纸信封, 每套 50 个&quot;</value>
+            <value>&quot;Ames 马尼拉纸信封, 银色&quot;</value>
+            <value>&quot;Ames 商业信封, 红色&quot;</value>
+            <value>&quot;Ames 商业信封, 回收&quot;</value>
+            <value>&quot;Ames 商业信封, 每套 50 个&quot;</value>
+            <value>&quot;Ames 商业信封, 银色&quot;</value>
+            <value>&quot;Ames 外皮和封条, 红色&quot;</value>
+            <value>&quot;Ames 外皮和封条, 回收&quot;</value>
+            <value>&quot;Ames 外皮和封条, 每套 50 个&quot;</value>
+            <value>&quot;Ames 外皮和封条, 银色&quot;</value>
+            <value>&quot;Ames 邮寄品, 红色&quot;</value>
+            <value>&quot;Ames 邮寄品, 回收&quot;</value>
+            <value>&quot;Ames 邮寄品, 每套 50 个&quot;</value>
+            <value>&quot;Ames 邮寄品, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Avery&quot;'>
+            <value>&quot;Avery 标签, 回收&quot;</value>
+            <value>&quot;Avery 标签, 耐用&quot;</value>
+            <value>&quot;Avery 标签, 实惠&quot;</value>
+            <value>&quot;Avery 标签, 透明&quot;</value>
+            <value>&quot;Avery 打孔机, 回收&quot;</value>
+            <value>&quot;Avery 打孔机, 耐用&quot;</value>
+            <value>&quot;Avery 打孔机, 实惠&quot;</value>
+            <value>&quot;Avery 打孔机, 透明&quot;</value>
+            <value>&quot;Avery 订书机, 回收&quot;</value>
+            <value>&quot;Avery 订书机, 耐用&quot;</value>
+            <value>&quot;Avery 订书机, 实惠&quot;</value>
+            <value>&quot;Avery 订书机, 透明&quot;</value>
+            <value>&quot;Avery 合法证物标签, 白色&quot;</value>
+            <value>&quot;Avery 合法证物标签, 红色&quot;</value>
+            <value>&quot;Avery 合法证物标签, 可调&quot;</value>
+            <value>&quot;Avery 合法证物标签, 耐用&quot;</value>
+            <value>&quot;Avery 可去除的标签, 白色&quot;</value>
+            <value>&quot;Avery 可去除的标签, 红色&quot;</value>
+            <value>&quot;Avery 可去除的标签, 可调&quot;</value>
+            <value>&quot;Avery 可去除的标签, 耐用&quot;</value>
+            <value>&quot;Avery 孔加固材料, 回收&quot;</value>
+            <value>&quot;Avery 孔加固材料, 耐用&quot;</value>
+            <value>&quot;Avery 孔加固材料, 实惠&quot;</value>
+            <value>&quot;Avery 孔加固材料, 透明&quot;</value>
+            <value>&quot;Avery 文件夹标签, 白色&quot;</value>
+            <value>&quot;Avery 文件夹标签, 红色&quot;</value>
+            <value>&quot;Avery 文件夹标签, 可调&quot;</value>
+            <value>&quot;Avery 文件夹标签, 耐用&quot;</value>
+            <value>&quot;Avery 有色标签, 白色&quot;</value>
+            <value>&quot;Avery 有色标签, 红色&quot;</value>
+            <value>&quot;Avery 有色标签, 可调&quot;</value>
+            <value>&quot;Avery 有色标签, 耐用&quot;</value>
+            <value>&quot;Avery 圆形标签, 白色&quot;</value>
+            <value>&quot;Avery 圆形标签, 红色&quot;</value>
+            <value>&quot;Avery 圆形标签, 可调&quot;</value>
+            <value>&quot;Avery 圆形标签, 耐用&quot;</value>
+            <value>&quot;Avery 运输标签, 白色&quot;</value>
+            <value>&quot;Avery 运输标签, 红色&quot;</value>
+            <value>&quot;Avery 运输标签, 可调&quot;</value>
+            <value>&quot;Avery 运输标签, 耐用&quot;</value>
+            <value>&quot;Avery 装订机, 回收&quot;</value>
+            <value>&quot;Avery 装订机, 耐用&quot;</value>
+            <value>&quot;Avery 装订机, 实惠&quot;</value>
+            <value>&quot;Avery 装订机, 透明&quot;</value>
+            <value>&quot;Avery 装订机盖, 回收&quot;</value>
+            <value>&quot;Avery 装订机盖, 耐用&quot;</value>
+            <value>&quot;Avery 装订机盖, 实惠&quot;</value>
+            <value>&quot;Avery 装订机盖, 透明&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Barricks&quot;'>
+            <value>&quot;Barricks 电脑桌, 白色&quot;</value>
+            <value>&quot;Barricks 电脑桌, 长方形&quot;</value>
+            <value>&quot;Barricks 会议桌, 白色&quot;</value>
+            <value>&quot;Barricks 会议桌, 长方形&quot;</value>
+            <value>&quot;Barricks 会议桌, 组装&quot;</value>
+            <value>&quot;Barricks 咖啡桌, 长方形&quot;</value>
+            <value>&quot;Barricks 木桌, 白色&quot;</value>
+            <value>&quot;Barricks 木桌, 长方形&quot;</value>
+            <value>&quot;Barricks 木桌, 黑色&quot;</value>
+            <value>&quot;Barricks 木桌, 组装&quot;</value>
+            <value>&quot;Barricks 培训桌, 白色&quot;</value>
+            <value>&quot;Barricks 培训桌, 长方形&quot;</value>
+            <value>&quot;Barricks 培训桌, 黑色&quot;</value>
+            <value>&quot;Barricks 培训桌, 组装&quot;</value>
+            <value>&quot;Barricks 圆桌, 白色&quot;</value>
+            <value>&quot;Barricks 圆桌, 长方形&quot;</value>
+            <value>&quot;Barricks 圆桌, 组装&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Bevis&quot;'>
+            <value>&quot;Bevis 电脑桌, 黑色&quot;</value>
+            <value>&quot;Bevis 会议桌, 长方形&quot;</value>
+            <value>&quot;Bevis 会议桌, 组装&quot;</value>
+            <value>&quot;Bevis 咖啡桌, 白色&quot;</value>
+            <value>&quot;Bevis 咖啡桌, 长方形&quot;</value>
+            <value>&quot;Bevis 咖啡桌, 黑色&quot;</value>
+            <value>&quot;Bevis 咖啡桌, 组装&quot;</value>
+            <value>&quot;Bevis 木桌, 黑色&quot;</value>
+            <value>&quot;Bevis 木桌, 组装&quot;</value>
+            <value>&quot;Bevis 培训桌, 白色&quot;</value>
+            <value>&quot;Bevis 培训桌, 长方形&quot;</value>
+            <value>&quot;Bevis 培训桌, 黑色&quot;</value>
+            <value>&quot;Bevis 培训桌, 组装&quot;</value>
+            <value>&quot;Bevis 圆桌, 长方形&quot;</value>
+            <value>&quot;Bevis 圆桌, 黑色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;BIC&quot;'>
+            <value>&quot;BIC 钢笔, 混合尺寸&quot;</value>
+            <value>&quot;BIC 钢笔, 金属&quot;</value>
+            <value>&quot;BIC 钢笔, 蓝色&quot;</value>
+            <value>&quot;BIC 钢笔, 整包&quot;</value>
+            <value>&quot;BIC 画布, 混合尺寸&quot;</value>
+            <value>&quot;BIC 画布, 金属&quot;</value>
+            <value>&quot;BIC 画布, 蓝色&quot;</value>
+            <value>&quot;BIC 画布, 整包&quot;</value>
+            <value>&quot;BIC 记号笔, 混合尺寸&quot;</value>
+            <value>&quot;BIC 记号笔, 金属&quot;</value>
+            <value>&quot;BIC 记号笔, 蓝色&quot;</value>
+            <value>&quot;BIC 记号笔, 整包&quot;</value>
+            <value>&quot;BIC 铅笔刀, 混合尺寸&quot;</value>
+            <value>&quot;BIC 铅笔刀, 金属&quot;</value>
+            <value>&quot;BIC 铅笔刀, 蓝色&quot;</value>
+            <value>&quot;BIC 铅笔刀, 整包&quot;</value>
+            <value>&quot;BIC 速写本, 混合尺寸&quot;</value>
+            <value>&quot;BIC 速写本, 金属&quot;</value>
+            <value>&quot;BIC 速写本, 蓝色&quot;</value>
+            <value>&quot;BIC 速写本, 整包&quot;</value>
+            <value>&quot;BIC 荧光笔, 混合尺寸&quot;</value>
+            <value>&quot;BIC 荧光笔, 金属&quot;</value>
+            <value>&quot;BIC 荧光笔, 蓝色&quot;</value>
+            <value>&quot;BIC 荧光笔, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Binney &amp; Smith&quot;'>
+            <value>&quot;Binney &amp; Smith 钢笔, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 钢笔, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 钢笔, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 钢笔, 整包&quot;</value>
+            <value>&quot;Binney &amp; Smith 画布, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 画布, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 画布, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 画布, 整包&quot;</value>
+            <value>&quot;Binney &amp; Smith 记号笔, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 记号笔, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 记号笔, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 记号笔, 整包&quot;</value>
+            <value>&quot;Binney &amp; Smith 铅笔刀, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 铅笔刀, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 铅笔刀, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 铅笔刀, 整包&quot;</value>
+            <value>&quot;Binney &amp; Smith 速写本, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 速写本, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 速写本, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 速写本, 整包&quot;</value>
+            <value>&quot;Binney &amp; Smith 荧光笔, 混合尺寸&quot;</value>
+            <value>&quot;Binney &amp; Smith 荧光笔, 金属&quot;</value>
+            <value>&quot;Binney &amp; Smith 荧光笔, 蓝色&quot;</value>
+            <value>&quot;Binney &amp; Smith 荧光笔, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Boston&quot;'>
+            <value>&quot;Boston 钢笔, 混合尺寸&quot;</value>
+            <value>&quot;Boston 钢笔, 金属&quot;</value>
+            <value>&quot;Boston 钢笔, 蓝色&quot;</value>
+            <value>&quot;Boston 钢笔, 整包&quot;</value>
+            <value>&quot;Boston 画布, 混合尺寸&quot;</value>
+            <value>&quot;Boston 画布, 金属&quot;</value>
+            <value>&quot;Boston 画布, 蓝色&quot;</value>
+            <value>&quot;Boston 画布, 整包&quot;</value>
+            <value>&quot;Boston 记号笔, 混合尺寸&quot;</value>
+            <value>&quot;Boston 记号笔, 金属&quot;</value>
+            <value>&quot;Boston 记号笔, 蓝色&quot;</value>
+            <value>&quot;Boston 记号笔, 整包&quot;</value>
+            <value>&quot;Boston 铅笔刀, 混合尺寸&quot;</value>
+            <value>&quot;Boston 铅笔刀, 金属&quot;</value>
+            <value>&quot;Boston 铅笔刀, 蓝色&quot;</value>
+            <value>&quot;Boston 铅笔刀, 整包&quot;</value>
+            <value>&quot;Boston 速写本, 混合尺寸&quot;</value>
+            <value>&quot;Boston 速写本, 金属&quot;</value>
+            <value>&quot;Boston 速写本, 蓝色&quot;</value>
+            <value>&quot;Boston 速写本, 整包&quot;</value>
+            <value>&quot;Boston 荧光笔, 混合尺寸&quot;</value>
+            <value>&quot;Boston 荧光笔, 金属&quot;</value>
+            <value>&quot;Boston 荧光笔, 蓝色&quot;</value>
+            <value>&quot;Boston 荧光笔, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Breville&quot;'>
+            <value>&quot;Breville 冰箱, 白色&quot;</value>
+            <value>&quot;Breville 冰箱, 黑色&quot;</value>
+            <value>&quot;Breville 冰箱, 红色&quot;</value>
+            <value>&quot;Breville 冰箱, 银色&quot;</value>
+            <value>&quot;Breville 搅拌机, 白色&quot;</value>
+            <value>&quot;Breville 搅拌机, 黑色&quot;</value>
+            <value>&quot;Breville 搅拌机, 红色&quot;</value>
+            <value>&quot;Breville 搅拌机, 银色&quot;</value>
+            <value>&quot;Breville 咖啡研磨机, 白色&quot;</value>
+            <value>&quot;Breville 咖啡研磨机, 黑色&quot;</value>
+            <value>&quot;Breville 咖啡研磨机, 红色&quot;</value>
+            <value>&quot;Breville 咖啡研磨机, 银色&quot;</value>
+            <value>&quot;Breville 烤面包机, 白色&quot;</value>
+            <value>&quot;Breville 烤面包机, 黑色&quot;</value>
+            <value>&quot;Breville 烤面包机, 红色&quot;</value>
+            <value>&quot;Breville 烤面包机, 银色&quot;</value>
+            <value>&quot;Breville 炉灶, 白色&quot;</value>
+            <value>&quot;Breville 炉灶, 黑色&quot;</value>
+            <value>&quot;Breville 炉灶, 红色&quot;</value>
+            <value>&quot;Breville 炉灶, 银色&quot;</value>
+            <value>&quot;Breville 微波炉, 白色&quot;</value>
+            <value>&quot;Breville 微波炉, 黑色&quot;</value>
+            <value>&quot;Breville 微波炉, 红色&quot;</value>
+            <value>&quot;Breville 微波炉, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Brother&quot;'>
+            <value>&quot;Brother 传真复印机, 彩色&quot;</value>
+            <value>&quot;Brother 传真复印机, 红色&quot;</value>
+            <value>&quot;Brother 传真复印机, 每套两件&quot;</value>
+            <value>&quot;Brother 传真复印机, 数字化&quot;</value>
+            <value>&quot;Brother 传真机, 彩色&quot;</value>
+            <value>&quot;Brother 传真机, 红色&quot;</value>
+            <value>&quot;Brother 传真机, 每套两件&quot;</value>
+            <value>&quot;Brother 传真机, 数字化&quot;</value>
+            <value>&quot;Brother 复印机, 彩色&quot;</value>
+            <value>&quot;Brother 复印机, 红色&quot;</value>
+            <value>&quot;Brother 复印机, 每套两件&quot;</value>
+            <value>&quot;Brother 复印机, 数字化&quot;</value>
+            <value>&quot;Brother 个人复印机, 彩色&quot;</value>
+            <value>&quot;Brother 个人复印机, 红色&quot;</value>
+            <value>&quot;Brother 个人复印机, 每套两件&quot;</value>
+            <value>&quot;Brother 个人复印机, 数字化&quot;</value>
+            <value>&quot;Brother 墨水, 彩色&quot;</value>
+            <value>&quot;Brother 墨水, 红色&quot;</value>
+            <value>&quot;Brother 墨水, 每套两件&quot;</value>
+            <value>&quot;Brother 墨水, 数字化&quot;</value>
+            <value>&quot;Brother 无线传真机, 彩色&quot;</value>
+            <value>&quot;Brother 无线传真机, 红色&quot;</value>
+            <value>&quot;Brother 无线传真机, 每套两件&quot;</value>
+            <value>&quot;Brother 无线传真机, 数字化&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Bush&quot;'>
+            <value>&quot;Bush 搁架, 白色&quot;</value>
+            <value>&quot;Bush 搁架, 传统&quot;</value>
+            <value>&quot;Bush 搁架, 黑色&quot;</value>
+            <value>&quot;Bush 搁架, 金属&quot;</value>
+            <value>&quot;Bush 古典书架, 白色&quot;</value>
+            <value>&quot;Bush 古典书架, 传统&quot;</value>
+            <value>&quot;Bush 古典书架, 黑色&quot;</value>
+            <value>&quot;Bush 古典书架, 金属&quot;</value>
+            <value>&quot;Bush 柜, 白色&quot;</value>
+            <value>&quot;Bush 柜, 传统&quot;</value>
+            <value>&quot;Bush 柜, 黑色&quot;</value>
+            <value>&quot;Bush 柜, 金属&quot;</value>
+            <value>&quot;Bush 墙角架, 白色&quot;</value>
+            <value>&quot;Bush 墙角架, 传统&quot;</value>
+            <value>&quot;Bush 墙角架, 黑色&quot;</value>
+            <value>&quot;Bush 墙角架, 金属&quot;</value>
+            <value>&quot;Bush 书架, 白色&quot;</value>
+            <value>&quot;Bush 书架, 传统&quot;</value>
+            <value>&quot;Bush 书架, 黑色&quot;</value>
+            <value>&quot;Bush 书架, 金属&quot;</value>
+            <value>&quot;Bush 书库, 白色&quot;</value>
+            <value>&quot;Bush 书库, 传统&quot;</value>
+            <value>&quot;Bush 书库, 黑色&quot;</value>
+            <value>&quot;Bush 书库, 金属&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cameo&quot;'>
+            <value>&quot;Cameo 搭扣信封, 红色&quot;</value>
+            <value>&quot;Cameo 搭扣信封, 回收&quot;</value>
+            <value>&quot;Cameo 搭扣信封, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 搭扣信封, 银色&quot;</value>
+            <value>&quot;Cameo 局间信封, 红色&quot;</value>
+            <value>&quot;Cameo 局间信封, 回收&quot;</value>
+            <value>&quot;Cameo 局间信封, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 局间信封, 银色&quot;</value>
+            <value>&quot;Cameo 马尼拉纸信封, 红色&quot;</value>
+            <value>&quot;Cameo 马尼拉纸信封, 回收&quot;</value>
+            <value>&quot;Cameo 马尼拉纸信封, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 马尼拉纸信封, 银色&quot;</value>
+            <value>&quot;Cameo 商业信封, 红色&quot;</value>
+            <value>&quot;Cameo 商业信封, 回收&quot;</value>
+            <value>&quot;Cameo 商业信封, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 商业信封, 银色&quot;</value>
+            <value>&quot;Cameo 外皮和封条, 红色&quot;</value>
+            <value>&quot;Cameo 外皮和封条, 回收&quot;</value>
+            <value>&quot;Cameo 外皮和封条, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 外皮和封条, 银色&quot;</value>
+            <value>&quot;Cameo 邮寄品, 红色&quot;</value>
+            <value>&quot;Cameo 邮寄品, 回收&quot;</value>
+            <value>&quot;Cameo 邮寄品, 每套 50 个&quot;</value>
+            <value>&quot;Cameo 邮寄品, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cardinal&quot;'>
+            <value>&quot;Cardinal 标签, 回收&quot;</value>
+            <value>&quot;Cardinal 标签, 耐用&quot;</value>
+            <value>&quot;Cardinal 标签, 实惠&quot;</value>
+            <value>&quot;Cardinal 标签, 透明&quot;</value>
+            <value>&quot;Cardinal 打孔机, 回收&quot;</value>
+            <value>&quot;Cardinal 打孔机, 耐用&quot;</value>
+            <value>&quot;Cardinal 打孔机, 实惠&quot;</value>
+            <value>&quot;Cardinal 打孔机, 透明&quot;</value>
+            <value>&quot;Cardinal 订书机, 回收&quot;</value>
+            <value>&quot;Cardinal 订书机, 耐用&quot;</value>
+            <value>&quot;Cardinal 订书机, 实惠&quot;</value>
+            <value>&quot;Cardinal 订书机, 透明&quot;</value>
+            <value>&quot;Cardinal 孔加固材料, 回收&quot;</value>
+            <value>&quot;Cardinal 孔加固材料, 耐用&quot;</value>
+            <value>&quot;Cardinal 孔加固材料, 实惠&quot;</value>
+            <value>&quot;Cardinal 孔加固材料, 透明&quot;</value>
+            <value>&quot;Cardinal 装订机, 回收&quot;</value>
+            <value>&quot;Cardinal 装订机, 耐用&quot;</value>
+            <value>&quot;Cardinal 装订机, 实惠&quot;</value>
+            <value>&quot;Cardinal 装订机, 透明&quot;</value>
+            <value>&quot;Cardinal 装订机盖, 回收&quot;</value>
+            <value>&quot;Cardinal 装订机盖, 耐用&quot;</value>
+            <value>&quot;Cardinal 装订机盖, 实惠&quot;</value>
+            <value>&quot;Cardinal 装订机盖, 透明&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Chromcraft&quot;'>
+            <value>&quot;Chromcraft 电脑桌, 长方形&quot;</value>
+            <value>&quot;Chromcraft 电脑桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 电脑桌, 组装&quot;</value>
+            <value>&quot;Chromcraft 会议桌, 白色&quot;</value>
+            <value>&quot;Chromcraft 会议桌, 长方形&quot;</value>
+            <value>&quot;Chromcraft 会议桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 会议桌, 组装&quot;</value>
+            <value>&quot;Chromcraft 咖啡桌, 白色&quot;</value>
+            <value>&quot;Chromcraft 咖啡桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 咖啡桌, 组装&quot;</value>
+            <value>&quot;Chromcraft 木桌, 白色&quot;</value>
+            <value>&quot;Chromcraft 木桌, 长方形&quot;</value>
+            <value>&quot;Chromcraft 木桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 木桌, 组装&quot;</value>
+            <value>&quot;Chromcraft 培训桌, 白色&quot;</value>
+            <value>&quot;Chromcraft 培训桌, 长方形&quot;</value>
+            <value>&quot;Chromcraft 培训桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 培训桌, 组装&quot;</value>
+            <value>&quot;Chromcraft 圆桌, 白色&quot;</value>
+            <value>&quot;Chromcraft 圆桌, 长方形&quot;</value>
+            <value>&quot;Chromcraft 圆桌, 黑色&quot;</value>
+            <value>&quot;Chromcraft 圆桌, 组装&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cuisinart&quot;'>
+            <value>&quot;Cuisinart 冰箱, 白色&quot;</value>
+            <value>&quot;Cuisinart 冰箱, 黑色&quot;</value>
+            <value>&quot;Cuisinart 冰箱, 红色&quot;</value>
+            <value>&quot;Cuisinart 冰箱, 银色&quot;</value>
+            <value>&quot;Cuisinart 搅拌机, 白色&quot;</value>
+            <value>&quot;Cuisinart 搅拌机, 黑色&quot;</value>
+            <value>&quot;Cuisinart 搅拌机, 红色&quot;</value>
+            <value>&quot;Cuisinart 咖啡研磨机, 白色&quot;</value>
+            <value>&quot;Cuisinart 咖啡研磨机, 黑色&quot;</value>
+            <value>&quot;Cuisinart 咖啡研磨机, 红色&quot;</value>
+            <value>&quot;Cuisinart 咖啡研磨机, 银色&quot;</value>
+            <value>&quot;Cuisinart 烤面包机, 白色&quot;</value>
+            <value>&quot;Cuisinart 烤面包机, 黑色&quot;</value>
+            <value>&quot;Cuisinart 烤面包机, 红色&quot;</value>
+            <value>&quot;Cuisinart 烤面包机, 银色&quot;</value>
+            <value>&quot;Cuisinart 炉灶, 白色&quot;</value>
+            <value>&quot;Cuisinart 炉灶, 黑色&quot;</value>
+            <value>&quot;Cuisinart 炉灶, 银色&quot;</value>
+            <value>&quot;Cuisinart 微波炉, 白色&quot;</value>
+            <value>&quot;Cuisinart 微波炉, 黑色&quot;</value>
+            <value>&quot;Cuisinart 微波炉, 红色&quot;</value>
+            <value>&quot;Cuisinart 微波炉, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Dania&quot;'>
+            <value>&quot;Dania 搁架, 白色&quot;</value>
+            <value>&quot;Dania 搁架, 传统&quot;</value>
+            <value>&quot;Dania 搁架, 黑色&quot;</value>
+            <value>&quot;Dania 搁架, 金属&quot;</value>
+            <value>&quot;Dania 古典书架, 白色&quot;</value>
+            <value>&quot;Dania 古典书架, 黑色&quot;</value>
+            <value>&quot;Dania 古典书架, 金属&quot;</value>
+            <value>&quot;Dania 柜, 传统&quot;</value>
+            <value>&quot;Dania 柜, 黑色&quot;</value>
+            <value>&quot;Dania 柜, 金属&quot;</value>
+            <value>&quot;Dania 墙角架, 白色&quot;</value>
+            <value>&quot;Dania 墙角架, 传统&quot;</value>
+            <value>&quot;Dania 墙角架, 黑色&quot;</value>
+            <value>&quot;Dania 墙角架, 金属&quot;</value>
+            <value>&quot;Dania 书架, 白色&quot;</value>
+            <value>&quot;Dania 书架, 传统&quot;</value>
+            <value>&quot;Dania 书架, 黑色&quot;</value>
+            <value>&quot;Dania 书架, 金属&quot;</value>
+            <value>&quot;Dania 书库, 白色&quot;</value>
+            <value>&quot;Dania 书库, 传统&quot;</value>
+            <value>&quot;Dania 书库, 金属&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Deflect-O&quot;'>
+            <value>&quot;Deflect-O 灯泡, 黑色&quot;</value>
+            <value>&quot;Deflect-O 灯泡, 耐用&quot;</value>
+            <value>&quot;Deflect-O 灯泡, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 灯泡, 优质&quot;</value>
+            <value>&quot;Deflect-O 分层置放架, 黑色&quot;</value>
+            <value>&quot;Deflect-O 分层置放架, 耐用&quot;</value>
+            <value>&quot;Deflect-O 分层置放架, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 分层置放架, 优质&quot;</value>
+            <value>&quot;Deflect-O 框架, 黑色&quot;</value>
+            <value>&quot;Deflect-O 框架, 耐用&quot;</value>
+            <value>&quot;Deflect-O 框架, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 框架, 优质&quot;</value>
+            <value>&quot;Deflect-O 门挡, 黑色&quot;</value>
+            <value>&quot;Deflect-O 门挡, 耐用&quot;</value>
+            <value>&quot;Deflect-O 门挡, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 门挡, 优质&quot;</value>
+            <value>&quot;Deflect-O 闹钟, 黑色&quot;</value>
+            <value>&quot;Deflect-O 闹钟, 耐用&quot;</value>
+            <value>&quot;Deflect-O 闹钟, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 闹钟, 优质&quot;</value>
+            <value>&quot;Deflect-O 相框, 黑色&quot;</value>
+            <value>&quot;Deflect-O 相框, 耐用&quot;</value>
+            <value>&quot;Deflect-O 相框, 一包多件&quot;</value>
+            <value>&quot;Deflect-O 相框, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Eaton&quot;'>
+            <value>&quot;Eaton 备忘录便条, 多色&quot;</value>
+            <value>&quot;Eaton 备忘录便条, 回收&quot;</value>
+            <value>&quot;Eaton 备忘录便条, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 备忘录便条, 优质&quot;</value>
+            <value>&quot;Eaton 笔记本, 多色&quot;</value>
+            <value>&quot;Eaton 笔记本, 回收&quot;</value>
+            <value>&quot;Eaton 笔记本, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 笔记本, 优质&quot;</value>
+            <value>&quot;Eaton 计划信息表, 多色&quot;</value>
+            <value>&quot;Eaton 计划信息表, 回收&quot;</value>
+            <value>&quot;Eaton 计划信息表, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 计划信息表, 优质&quot;</value>
+            <value>&quot;Eaton 令, 多色&quot;</value>
+            <value>&quot;Eaton 令, 回收&quot;</value>
+            <value>&quot;Eaton 令, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 令, 优质&quot;</value>
+            <value>&quot;Eaton 信纸, 多色&quot;</value>
+            <value>&quot;Eaton 信纸, 回收&quot;</value>
+            <value>&quot;Eaton 信纸, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 信纸, 优质&quot;</value>
+            <value>&quot;Eaton 羊皮纸, 多色&quot;</value>
+            <value>&quot;Eaton 羊皮纸, 回收&quot;</value>
+            <value>&quot;Eaton 羊皮纸, 每包 12 个&quot;</value>
+            <value>&quot;Eaton 羊皮纸, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Eldon&quot;'>
+            <value>&quot;Eldon 灯泡, 黑色&quot;</value>
+            <value>&quot;Eldon 灯泡, 耐用&quot;</value>
+            <value>&quot;Eldon 灯泡, 一包多件&quot;</value>
+            <value>&quot;Eldon 灯泡, 优质&quot;</value>
+            <value>&quot;Eldon 分层置放架, 耐用&quot;</value>
+            <value>&quot;Eldon 分层置放架, 一包多件&quot;</value>
+            <value>&quot;Eldon 分层置放架, 优质&quot;</value>
+            <value>&quot;Eldon 搁板, 单宽度&quot;</value>
+            <value>&quot;Eldon 搁板, 工业&quot;</value>
+            <value>&quot;Eldon 搁板, 金属&quot;</value>
+            <value>&quot;Eldon 搁板, 蓝色&quot;</value>
+            <value>&quot;Eldon 盒, 单宽度&quot;</value>
+            <value>&quot;Eldon 盒, 工业&quot;</value>
+            <value>&quot;Eldon 盒, 金属&quot;</value>
+            <value>&quot;Eldon 盒, 蓝色&quot;</value>
+            <value>&quot;Eldon 框架, 黑色&quot;</value>
+            <value>&quot;Eldon 框架, 耐用&quot;</value>
+            <value>&quot;Eldon 框架, 一包多件&quot;</value>
+            <value>&quot;Eldon 框架, 优质&quot;</value>
+            <value>&quot;Eldon 门挡, 黑色&quot;</value>
+            <value>&quot;Eldon 门挡, 耐用&quot;</value>
+            <value>&quot;Eldon 门挡, 一包多件&quot;</value>
+            <value>&quot;Eldon 门挡, 优质&quot;</value>
+            <value>&quot;Eldon 闹钟, 黑色&quot;</value>
+            <value>&quot;Eldon 闹钟, 耐用&quot;</value>
+            <value>&quot;Eldon 闹钟, 一包多件&quot;</value>
+            <value>&quot;Eldon 闹钟, 优质&quot;</value>
+            <value>&quot;Eldon 盘, 单宽度&quot;</value>
+            <value>&quot;Eldon 盘, 工业&quot;</value>
+            <value>&quot;Eldon 盘, 金属&quot;</value>
+            <value>&quot;Eldon 盘, 蓝色&quot;</value>
+            <value>&quot;Eldon 锁柜, 单宽度&quot;</value>
+            <value>&quot;Eldon 锁柜, 工业&quot;</value>
+            <value>&quot;Eldon 锁柜, 金属&quot;</value>
+            <value>&quot;Eldon 锁柜, 蓝色&quot;</value>
+            <value>&quot;Eldon 文件车, 单宽度&quot;</value>
+            <value>&quot;Eldon 文件车, 工业&quot;</value>
+            <value>&quot;Eldon 文件车, 金属&quot;</value>
+            <value>&quot;Eldon 文件车, 蓝色&quot;</value>
+            <value>&quot;Eldon 文件夹, 单宽度&quot;</value>
+            <value>&quot;Eldon 文件夹, 工业&quot;</value>
+            <value>&quot;Eldon 文件夹, 金属&quot;</value>
+            <value>&quot;Eldon 文件夹, 蓝色&quot;</value>
+            <value>&quot;Eldon 相框, 黑色&quot;</value>
+            <value>&quot;Eldon 相框, 耐用&quot;</value>
+            <value>&quot;Eldon 相框, 一包多件&quot;</value>
+            <value>&quot;Eldon 相框, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Elite&quot;'>
+            <value>&quot;Elite 尺子, 钢&quot;</value>
+            <value>&quot;Elite 尺子, 工业&quot;</value>
+            <value>&quot;Elite 尺子, 锯齿状&quot;</value>
+            <value>&quot;Elite 尺子, 蓝色&quot;</value>
+            <value>&quot;Elite 大剪刀, 钢&quot;</value>
+            <value>&quot;Elite 大剪刀, 工业&quot;</value>
+            <value>&quot;Elite 大剪刀, 锯齿状&quot;</value>
+            <value>&quot;Elite 大剪刀, 蓝色&quot;</value>
+            <value>&quot;Elite 剪刀, 钢&quot;</value>
+            <value>&quot;Elite 剪刀, 工业&quot;</value>
+            <value>&quot;Elite 剪刀, 锯齿状&quot;</value>
+            <value>&quot;Elite 剪刀, 蓝色&quot;</value>
+            <value>&quot;Elite 开信刀, 钢&quot;</value>
+            <value>&quot;Elite 开信刀, 工业&quot;</value>
+            <value>&quot;Elite 开信刀, 锯齿状&quot;</value>
+            <value>&quot;Elite 开信刀, 蓝色&quot;</value>
+            <value>&quot;Elite 美工刀, 钢&quot;</value>
+            <value>&quot;Elite 美工刀, 工业&quot;</value>
+            <value>&quot;Elite 美工刀, 锯齿状&quot;</value>
+            <value>&quot;Elite 美工刀, 蓝色&quot;</value>
+            <value>&quot;Elite 修剪器, 钢&quot;</value>
+            <value>&quot;Elite 修剪器, 工业&quot;</value>
+            <value>&quot;Elite 修剪器, 锯齿状&quot;</value>
+            <value>&quot;Elite 修剪器, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Enermax&quot;'>
+            <value>&quot;Enermax 备忘录便条, 多色&quot;</value>
+            <value>&quot;Enermax 备忘录便条, 回收&quot;</value>
+            <value>&quot;Enermax 备忘录便条, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 备忘录便条, 优质&quot;</value>
+            <value>&quot;Enermax 笔记本, 多色&quot;</value>
+            <value>&quot;Enermax 笔记本, 回收&quot;</value>
+            <value>&quot;Enermax 笔记本, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 笔记本, 优质&quot;</value>
+            <value>&quot;Enermax 计划信息表, 多色&quot;</value>
+            <value>&quot;Enermax 计划信息表, 回收&quot;</value>
+            <value>&quot;Enermax 计划信息表, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 计划信息表, 优质&quot;</value>
+            <value>&quot;Enermax 记忆卡, 回收&quot;</value>
+            <value>&quot;Enermax 记忆卡, 可编程&quot;</value>
+            <value>&quot;Enermax 记忆卡, 耐用&quot;</value>
+            <value>&quot;Enermax 记忆卡, 实惠&quot;</value>
+            <value>&quot;Enermax 键盘, 回收&quot;</value>
+            <value>&quot;Enermax 键盘, 可编程&quot;</value>
+            <value>&quot;Enermax 键盘, 耐用&quot;</value>
+            <value>&quot;Enermax 键盘, 实惠&quot;</value>
+            <value>&quot;Enermax 键区, 回收&quot;</value>
+            <value>&quot;Enermax 键区, 可编程&quot;</value>
+            <value>&quot;Enermax 键区, 耐用&quot;</value>
+            <value>&quot;Enermax 键区, 实惠&quot;</value>
+            <value>&quot;Enermax 令, 多色&quot;</value>
+            <value>&quot;Enermax 令, 回收&quot;</value>
+            <value>&quot;Enermax 令, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 令, 优质&quot;</value>
+            <value>&quot;Enermax 路由器, 回收&quot;</value>
+            <value>&quot;Enermax 路由器, 可编程&quot;</value>
+            <value>&quot;Enermax 路由器, 耐用&quot;</value>
+            <value>&quot;Enermax 路由器, 实惠&quot;</value>
+            <value>&quot;Enermax 闪存驱动器, 回收&quot;</value>
+            <value>&quot;Enermax 闪存驱动器, 可编程&quot;</value>
+            <value>&quot;Enermax 闪存驱动器, 耐用&quot;</value>
+            <value>&quot;Enermax 闪存驱动器, 实惠&quot;</value>
+            <value>&quot;Enermax 鼠标, 回收&quot;</value>
+            <value>&quot;Enermax 鼠标, 可编程&quot;</value>
+            <value>&quot;Enermax 鼠标, 耐用&quot;</value>
+            <value>&quot;Enermax 鼠标, 实惠&quot;</value>
+            <value>&quot;Enermax 信纸, 多色&quot;</value>
+            <value>&quot;Enermax 信纸, 回收&quot;</value>
+            <value>&quot;Enermax 信纸, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 信纸, 优质&quot;</value>
+            <value>&quot;Enermax 羊皮纸, 多色&quot;</value>
+            <value>&quot;Enermax 羊皮纸, 每包 12 个&quot;</value>
+            <value>&quot;Enermax 羊皮纸, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Fellowes&quot;'>
+            <value>&quot;Fellowes 搁板, 单宽度&quot;</value>
+            <value>&quot;Fellowes 搁板, 工业&quot;</value>
+            <value>&quot;Fellowes 搁板, 金属&quot;</value>
+            <value>&quot;Fellowes 搁板, 蓝色&quot;</value>
+            <value>&quot;Fellowes 盒, 单宽度&quot;</value>
+            <value>&quot;Fellowes 盒, 工业&quot;</value>
+            <value>&quot;Fellowes 盒, 金属&quot;</value>
+            <value>&quot;Fellowes 盒, 蓝色&quot;</value>
+            <value>&quot;Fellowes 盘, 单宽度&quot;</value>
+            <value>&quot;Fellowes 盘, 工业&quot;</value>
+            <value>&quot;Fellowes 盘, 金属&quot;</value>
+            <value>&quot;Fellowes 盘, 蓝色&quot;</value>
+            <value>&quot;Fellowes 锁柜, 单宽度&quot;</value>
+            <value>&quot;Fellowes 锁柜, 工业&quot;</value>
+            <value>&quot;Fellowes 锁柜, 金属&quot;</value>
+            <value>&quot;Fellowes 锁柜, 蓝色&quot;</value>
+            <value>&quot;Fellowes 文件车, 单宽度&quot;</value>
+            <value>&quot;Fellowes 文件车, 工业&quot;</value>
+            <value>&quot;Fellowes 文件车, 金属&quot;</value>
+            <value>&quot;Fellowes 文件车, 蓝色&quot;</value>
+            <value>&quot;Fellowes 文件夹, 单宽度&quot;</value>
+            <value>&quot;Fellowes 文件夹, 工业&quot;</value>
+            <value>&quot;Fellowes 文件夹, 金属&quot;</value>
+            <value>&quot;Fellowes 文件夹, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Fiskars&quot;'>
+            <value>&quot;Fiskars 尺子, 钢&quot;</value>
+            <value>&quot;Fiskars 尺子, 工业&quot;</value>
+            <value>&quot;Fiskars 尺子, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 尺子, 蓝色&quot;</value>
+            <value>&quot;Fiskars 大剪刀, 钢&quot;</value>
+            <value>&quot;Fiskars 大剪刀, 工业&quot;</value>
+            <value>&quot;Fiskars 大剪刀, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 大剪刀, 蓝色&quot;</value>
+            <value>&quot;Fiskars 剪刀, 钢&quot;</value>
+            <value>&quot;Fiskars 剪刀, 工业&quot;</value>
+            <value>&quot;Fiskars 剪刀, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 剪刀, 蓝色&quot;</value>
+            <value>&quot;Fiskars 开信刀, 钢&quot;</value>
+            <value>&quot;Fiskars 开信刀, 工业&quot;</value>
+            <value>&quot;Fiskars 开信刀, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 开信刀, 蓝色&quot;</value>
+            <value>&quot;Fiskars 美工刀, 钢&quot;</value>
+            <value>&quot;Fiskars 美工刀, 工业&quot;</value>
+            <value>&quot;Fiskars 美工刀, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 美工刀, 蓝色&quot;</value>
+            <value>&quot;Fiskars 修剪器, 钢&quot;</value>
+            <value>&quot;Fiskars 修剪器, 工业&quot;</value>
+            <value>&quot;Fiskars 修剪器, 锯齿状&quot;</value>
+            <value>&quot;Fiskars 修剪器, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;GlobeWeis&quot;'>
+            <value>&quot;GlobeWeis 搭扣信封, 红色&quot;</value>
+            <value>&quot;GlobeWeis 搭扣信封, 回收&quot;</value>
+            <value>&quot;GlobeWeis 搭扣信封, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 搭扣信封, 银色&quot;</value>
+            <value>&quot;GlobeWeis 局间信封, 红色&quot;</value>
+            <value>&quot;GlobeWeis 局间信封, 回收&quot;</value>
+            <value>&quot;GlobeWeis 局间信封, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 局间信封, 银色&quot;</value>
+            <value>&quot;GlobeWeis 马尼拉纸信封, 红色&quot;</value>
+            <value>&quot;GlobeWeis 马尼拉纸信封, 回收&quot;</value>
+            <value>&quot;GlobeWeis 马尼拉纸信封, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 马尼拉纸信封, 银色&quot;</value>
+            <value>&quot;GlobeWeis 商业信封, 红色&quot;</value>
+            <value>&quot;GlobeWeis 商业信封, 回收&quot;</value>
+            <value>&quot;GlobeWeis 商业信封, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 商业信封, 银色&quot;</value>
+            <value>&quot;GlobeWeis 外皮和封条, 红色&quot;</value>
+            <value>&quot;GlobeWeis 外皮和封条, 回收&quot;</value>
+            <value>&quot;GlobeWeis 外皮和封条, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 外皮和封条, 银色&quot;</value>
+            <value>&quot;GlobeWeis 邮寄品, 回收&quot;</value>
+            <value>&quot;GlobeWeis 邮寄品, 每套 50 个&quot;</value>
+            <value>&quot;GlobeWeis 邮寄品, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Green Bar&quot;'>
+            <value>&quot;Green Bar 备忘录便条, 多色&quot;</value>
+            <value>&quot;Green Bar 备忘录便条, 回收&quot;</value>
+            <value>&quot;Green Bar 备忘录便条, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 备忘录便条, 优质&quot;</value>
+            <value>&quot;Green Bar 笔记本, 多色&quot;</value>
+            <value>&quot;Green Bar 笔记本, 回收&quot;</value>
+            <value>&quot;Green Bar 笔记本, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 笔记本, 优质&quot;</value>
+            <value>&quot;Green Bar 计划信息表, 多色&quot;</value>
+            <value>&quot;Green Bar 计划信息表, 回收&quot;</value>
+            <value>&quot;Green Bar 计划信息表, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 计划信息表, 优质&quot;</value>
+            <value>&quot;Green Bar 令, 多色&quot;</value>
+            <value>&quot;Green Bar 令, 回收&quot;</value>
+            <value>&quot;Green Bar 令, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 令, 优质&quot;</value>
+            <value>&quot;Green Bar 信纸, 多色&quot;</value>
+            <value>&quot;Green Bar 信纸, 回收&quot;</value>
+            <value>&quot;Green Bar 信纸, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 信纸, 优质&quot;</value>
+            <value>&quot;Green Bar 羊皮纸, 多色&quot;</value>
+            <value>&quot;Green Bar 羊皮纸, 回收&quot;</value>
+            <value>&quot;Green Bar 羊皮纸, 每包 12 个&quot;</value>
+            <value>&quot;Green Bar 羊皮纸, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hamilton Beach&quot;'>
+            <value>&quot;Hamilton Beach 冰箱, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 冰箱, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 冰箱, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 冰箱, 银色&quot;</value>
+            <value>&quot;Hamilton Beach 搅拌机, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 搅拌机, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 搅拌机, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 搅拌机, 银色&quot;</value>
+            <value>&quot;Hamilton Beach 咖啡研磨机, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 咖啡研磨机, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 咖啡研磨机, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 咖啡研磨机, 银色&quot;</value>
+            <value>&quot;Hamilton Beach 烤面包机, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 烤面包机, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 烤面包机, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 烤面包机, 银色&quot;</value>
+            <value>&quot;Hamilton Beach 炉灶, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 炉灶, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 炉灶, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 炉灶, 银色&quot;</value>
+            <value>&quot;Hamilton Beach 微波炉, 白色&quot;</value>
+            <value>&quot;Hamilton Beach 微波炉, 黑色&quot;</value>
+            <value>&quot;Hamilton Beach 微波炉, 红色&quot;</value>
+            <value>&quot;Hamilton Beach 微波炉, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Harbour Creations&quot;'>
+            <value>&quot;Harbour Creations 凳子, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 凳子, 红色&quot;</value>
+            <value>&quot;Harbour Creations 凳子, 可调&quot;</value>
+            <value>&quot;Harbour Creations 凳子, 每套两件&quot;</value>
+            <value>&quot;Harbour Creations 扶手椅, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 扶手椅, 红色&quot;</value>
+            <value>&quot;Harbour Creations 扶手椅, 可调&quot;</value>
+            <value>&quot;Harbour Creations 扶手椅, 每套两件&quot;</value>
+            <value>&quot;Harbour Creations 合法证物标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 合法证物标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 合法证物标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 合法证物标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 可去除的标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 可去除的标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 可去除的标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 可去除的标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 沙滩椅, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 沙滩椅, 红色&quot;</value>
+            <value>&quot;Harbour Creations 沙滩椅, 可调&quot;</value>
+            <value>&quot;Harbour Creations 沙滩椅, 每套两件&quot;</value>
+            <value>&quot;Harbour Creations 文件夹标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 文件夹标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 文件夹标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 文件夹标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 摇椅, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 摇椅, 红色&quot;</value>
+            <value>&quot;Harbour Creations 摇椅, 可调&quot;</value>
+            <value>&quot;Harbour Creations 摇椅, 每套两件&quot;</value>
+            <value>&quot;Harbour Creations 椅垫, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 椅垫, 红色&quot;</value>
+            <value>&quot;Harbour Creations 椅垫, 可调&quot;</value>
+            <value>&quot;Harbour Creations 椅垫, 每套两件&quot;</value>
+            <value>&quot;Harbour Creations 有色标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 有色标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 有色标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 有色标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 圆形标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 圆形标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 圆形标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 圆形标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 运输标签, 白色&quot;</value>
+            <value>&quot;Harbour Creations 运输标签, 红色&quot;</value>
+            <value>&quot;Harbour Creations 运输标签, 可调&quot;</value>
+            <value>&quot;Harbour Creations 运输标签, 耐用&quot;</value>
+            <value>&quot;Harbour Creations 折叠椅, 黑色&quot;</value>
+            <value>&quot;Harbour Creations 折叠椅, 红色&quot;</value>
+            <value>&quot;Harbour Creations 折叠椅, 可调&quot;</value>
+            <value>&quot;Harbour Creations 折叠椅, 每套两件&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hewlett&quot;'>
+            <value>&quot;Hewlett 传真复印机, 彩色&quot;</value>
+            <value>&quot;Hewlett 传真复印机, 红色&quot;</value>
+            <value>&quot;Hewlett 传真复印机, 每套两件&quot;</value>
+            <value>&quot;Hewlett 传真复印机, 数字化&quot;</value>
+            <value>&quot;Hewlett 传真机, 彩色&quot;</value>
+            <value>&quot;Hewlett 传真机, 红色&quot;</value>
+            <value>&quot;Hewlett 传真机, 每套两件&quot;</value>
+            <value>&quot;Hewlett 传真机, 数字化&quot;</value>
+            <value>&quot;Hewlett 复印机, 彩色&quot;</value>
+            <value>&quot;Hewlett 复印机, 红色&quot;</value>
+            <value>&quot;Hewlett 复印机, 每套两件&quot;</value>
+            <value>&quot;Hewlett 复印机, 数字化&quot;</value>
+            <value>&quot;Hewlett 个人复印机, 彩色&quot;</value>
+            <value>&quot;Hewlett 个人复印机, 红色&quot;</value>
+            <value>&quot;Hewlett 个人复印机, 每套两件&quot;</value>
+            <value>&quot;Hewlett 个人复印机, 数字化&quot;</value>
+            <value>&quot;Hewlett 墨水, 彩色&quot;</value>
+            <value>&quot;Hewlett 墨水, 红色&quot;</value>
+            <value>&quot;Hewlett 墨水, 每套两件&quot;</value>
+            <value>&quot;Hewlett 墨水, 数字化&quot;</value>
+            <value>&quot;Hewlett 无线传真机, 彩色&quot;</value>
+            <value>&quot;Hewlett 无线传真机, 红色&quot;</value>
+            <value>&quot;Hewlett 无线传真机, 每套两件&quot;</value>
+            <value>&quot;Hewlett 无线传真机, 数字化&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hon&quot;'>
+            <value>&quot;Hon 凳子, 黑色&quot;</value>
+            <value>&quot;Hon 凳子, 红色&quot;</value>
+            <value>&quot;Hon 凳子, 可调&quot;</value>
+            <value>&quot;Hon 凳子, 每套两件&quot;</value>
+            <value>&quot;Hon 电脑桌, 白色&quot;</value>
+            <value>&quot;Hon 电脑桌, 组装&quot;</value>
+            <value>&quot;Hon 扶手椅, 黑色&quot;</value>
+            <value>&quot;Hon 扶手椅, 红色&quot;</value>
+            <value>&quot;Hon 扶手椅, 可调&quot;</value>
+            <value>&quot;Hon 扶手椅, 每套两件&quot;</value>
+            <value>&quot;Hon 合法证物标签, 白色&quot;</value>
+            <value>&quot;Hon 合法证物标签, 红色&quot;</value>
+            <value>&quot;Hon 合法证物标签, 可调&quot;</value>
+            <value>&quot;Hon 合法证物标签, 耐用&quot;</value>
+            <value>&quot;Hon 会议桌, 白色&quot;</value>
+            <value>&quot;Hon 会议桌, 长方形&quot;</value>
+            <value>&quot;Hon 会议桌, 黑色&quot;</value>
+            <value>&quot;Hon 会议桌, 组装&quot;</value>
+            <value>&quot;Hon 咖啡桌, 白色&quot;</value>
+            <value>&quot;Hon 咖啡桌, 长方形&quot;</value>
+            <value>&quot;Hon 咖啡桌, 黑色&quot;</value>
+            <value>&quot;Hon 咖啡桌, 组装&quot;</value>
+            <value>&quot;Hon 可去除的标签, 白色&quot;</value>
+            <value>&quot;Hon 可去除的标签, 红色&quot;</value>
+            <value>&quot;Hon 可去除的标签, 可调&quot;</value>
+            <value>&quot;Hon 可去除的标签, 耐用&quot;</value>
+            <value>&quot;Hon 木桌, 白色&quot;</value>
+            <value>&quot;Hon 木桌, 长方形&quot;</value>
+            <value>&quot;Hon 木桌, 黑色&quot;</value>
+            <value>&quot;Hon 木桌, 组装&quot;</value>
+            <value>&quot;Hon 培训桌, 长方形&quot;</value>
+            <value>&quot;Hon 沙滩椅, 黑色&quot;</value>
+            <value>&quot;Hon 沙滩椅, 红色&quot;</value>
+            <value>&quot;Hon 沙滩椅, 可调&quot;</value>
+            <value>&quot;Hon 沙滩椅, 每套两件&quot;</value>
+            <value>&quot;Hon 文件夹标签, 白色&quot;</value>
+            <value>&quot;Hon 文件夹标签, 红色&quot;</value>
+            <value>&quot;Hon 文件夹标签, 可调&quot;</value>
+            <value>&quot;Hon 文件夹标签, 耐用&quot;</value>
+            <value>&quot;Hon 摇椅, 黑色&quot;</value>
+            <value>&quot;Hon 摇椅, 红色&quot;</value>
+            <value>&quot;Hon 摇椅, 可调&quot;</value>
+            <value>&quot;Hon 摇椅, 每套两件&quot;</value>
+            <value>&quot;Hon 椅垫, 黑色&quot;</value>
+            <value>&quot;Hon 椅垫, 红色&quot;</value>
+            <value>&quot;Hon 椅垫, 可调&quot;</value>
+            <value>&quot;Hon 椅垫, 每套两件&quot;</value>
+            <value>&quot;Hon 有色标签, 白色&quot;</value>
+            <value>&quot;Hon 有色标签, 红色&quot;</value>
+            <value>&quot;Hon 有色标签, 可调&quot;</value>
+            <value>&quot;Hon 有色标签, 耐用&quot;</value>
+            <value>&quot;Hon 圆形标签, 白色&quot;</value>
+            <value>&quot;Hon 圆形标签, 红色&quot;</value>
+            <value>&quot;Hon 圆形标签, 可调&quot;</value>
+            <value>&quot;Hon 圆形标签, 耐用&quot;</value>
+            <value>&quot;Hon 圆桌, 白色&quot;</value>
+            <value>&quot;Hon 圆桌, 长方形&quot;</value>
+            <value>&quot;Hon 圆桌, 黑色&quot;</value>
+            <value>&quot;Hon 圆桌, 组装&quot;</value>
+            <value>&quot;Hon 运输标签, 白色&quot;</value>
+            <value>&quot;Hon 运输标签, 红色&quot;</value>
+            <value>&quot;Hon 运输标签, 可调&quot;</value>
+            <value>&quot;Hon 运输标签, 耐用&quot;</value>
+            <value>&quot;Hon 折叠椅, 黑色&quot;</value>
+            <value>&quot;Hon 折叠椅, 红色&quot;</value>
+            <value>&quot;Hon 折叠椅, 可调&quot;</value>
+            <value>&quot;Hon 折叠椅, 每套两件&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hoover&quot;'>
+            <value>&quot;Hoover 冰箱, 白色&quot;</value>
+            <value>&quot;Hoover 冰箱, 黑色&quot;</value>
+            <value>&quot;Hoover 冰箱, 红色&quot;</value>
+            <value>&quot;Hoover 冰箱, 银色&quot;</value>
+            <value>&quot;Hoover 搅拌机, 白色&quot;</value>
+            <value>&quot;Hoover 搅拌机, 黑色&quot;</value>
+            <value>&quot;Hoover 搅拌机, 红色&quot;</value>
+            <value>&quot;Hoover 搅拌机, 银色&quot;</value>
+            <value>&quot;Hoover 咖啡研磨机, 白色&quot;</value>
+            <value>&quot;Hoover 咖啡研磨机, 黑色&quot;</value>
+            <value>&quot;Hoover 咖啡研磨机, 红色&quot;</value>
+            <value>&quot;Hoover 咖啡研磨机, 银色&quot;</value>
+            <value>&quot;Hoover 烤面包机, 白色&quot;</value>
+            <value>&quot;Hoover 烤面包机, 黑色&quot;</value>
+            <value>&quot;Hoover 烤面包机, 红色&quot;</value>
+            <value>&quot;Hoover 烤面包机, 银色&quot;</value>
+            <value>&quot;Hoover 炉灶, 白色&quot;</value>
+            <value>&quot;Hoover 炉灶, 黑色&quot;</value>
+            <value>&quot;Hoover 炉灶, 红色&quot;</value>
+            <value>&quot;Hoover 炉灶, 银色&quot;</value>
+            <value>&quot;Hoover 微波炉, 白色&quot;</value>
+            <value>&quot;Hoover 微波炉, 黑色&quot;</value>
+            <value>&quot;Hoover 微波炉, 红色&quot;</value>
+            <value>&quot;Hoover 微波炉, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Ibico&quot;'>
+            <value>&quot;Ibico 标签, 回收&quot;</value>
+            <value>&quot;Ibico 标签, 耐用&quot;</value>
+            <value>&quot;Ibico 标签, 实惠&quot;</value>
+            <value>&quot;Ibico 标签, 透明&quot;</value>
+            <value>&quot;Ibico 打孔机, 回收&quot;</value>
+            <value>&quot;Ibico 打孔机, 耐用&quot;</value>
+            <value>&quot;Ibico 打孔机, 实惠&quot;</value>
+            <value>&quot;Ibico 打孔机, 透明&quot;</value>
+            <value>&quot;Ibico 订书机, 回收&quot;</value>
+            <value>&quot;Ibico 订书机, 耐用&quot;</value>
+            <value>&quot;Ibico 订书机, 实惠&quot;</value>
+            <value>&quot;Ibico 订书机, 透明&quot;</value>
+            <value>&quot;Ibico 孔加固材料, 回收&quot;</value>
+            <value>&quot;Ibico 孔加固材料, 耐用&quot;</value>
+            <value>&quot;Ibico 孔加固材料, 实惠&quot;</value>
+            <value>&quot;Ibico 孔加固材料, 透明&quot;</value>
+            <value>&quot;Ibico 装订机, 回收&quot;</value>
+            <value>&quot;Ibico 装订机, 耐用&quot;</value>
+            <value>&quot;Ibico 装订机, 实惠&quot;</value>
+            <value>&quot;Ibico 装订机, 透明&quot;</value>
+            <value>&quot;Ibico 装订机盖, 回收&quot;</value>
+            <value>&quot;Ibico 装订机盖, 耐用&quot;</value>
+            <value>&quot;Ibico 装订机盖, 实惠&quot;</value>
+            <value>&quot;Ibico 装订机盖, 透明&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Jiffy&quot;'>
+            <value>&quot;Jiffy 搭扣信封, 红色&quot;</value>
+            <value>&quot;Jiffy 搭扣信封, 回收&quot;</value>
+            <value>&quot;Jiffy 搭扣信封, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 搭扣信封, 银色&quot;</value>
+            <value>&quot;Jiffy 局间信封, 红色&quot;</value>
+            <value>&quot;Jiffy 局间信封, 回收&quot;</value>
+            <value>&quot;Jiffy 局间信封, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 局间信封, 银色&quot;</value>
+            <value>&quot;Jiffy 马尼拉纸信封, 红色&quot;</value>
+            <value>&quot;Jiffy 马尼拉纸信封, 回收&quot;</value>
+            <value>&quot;Jiffy 马尼拉纸信封, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 马尼拉纸信封, 银色&quot;</value>
+            <value>&quot;Jiffy 商业信封, 红色&quot;</value>
+            <value>&quot;Jiffy 商业信封, 回收&quot;</value>
+            <value>&quot;Jiffy 商业信封, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 商业信封, 银色&quot;</value>
+            <value>&quot;Jiffy 外皮和封条, 红色&quot;</value>
+            <value>&quot;Jiffy 外皮和封条, 回收&quot;</value>
+            <value>&quot;Jiffy 外皮和封条, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 外皮和封条, 银色&quot;</value>
+            <value>&quot;Jiffy 邮寄品, 红色&quot;</value>
+            <value>&quot;Jiffy 邮寄品, 回收&quot;</value>
+            <value>&quot;Jiffy 邮寄品, 每套 50 个&quot;</value>
+            <value>&quot;Jiffy 邮寄品, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;KitchenAid&quot;'>
+            <value>&quot;KitchenAid 冰箱, 白色&quot;</value>
+            <value>&quot;KitchenAid 冰箱, 黑色&quot;</value>
+            <value>&quot;KitchenAid 冰箱, 红色&quot;</value>
+            <value>&quot;KitchenAid 冰箱, 银色&quot;</value>
+            <value>&quot;KitchenAid 搅拌机, 白色&quot;</value>
+            <value>&quot;KitchenAid 搅拌机, 黑色&quot;</value>
+            <value>&quot;KitchenAid 搅拌机, 红色&quot;</value>
+            <value>&quot;KitchenAid 搅拌机, 银色&quot;</value>
+            <value>&quot;KitchenAid 咖啡研磨机, 白色&quot;</value>
+            <value>&quot;KitchenAid 咖啡研磨机, 黑色&quot;</value>
+            <value>&quot;KitchenAid 咖啡研磨机, 红色&quot;</value>
+            <value>&quot;KitchenAid 咖啡研磨机, 银色&quot;</value>
+            <value>&quot;KitchenAid 烤面包机, 白色&quot;</value>
+            <value>&quot;KitchenAid 烤面包机, 黑色&quot;</value>
+            <value>&quot;KitchenAid 烤面包机, 红色&quot;</value>
+            <value>&quot;KitchenAid 烤面包机, 银色&quot;</value>
+            <value>&quot;KitchenAid 炉灶, 白色&quot;</value>
+            <value>&quot;KitchenAid 炉灶, 黑色&quot;</value>
+            <value>&quot;KitchenAid 炉灶, 红色&quot;</value>
+            <value>&quot;KitchenAid 炉灶, 银色&quot;</value>
+            <value>&quot;KitchenAid 微波炉, 白色&quot;</value>
+            <value>&quot;KitchenAid 微波炉, 黑色&quot;</value>
+            <value>&quot;KitchenAid 微波炉, 红色&quot;</value>
+            <value>&quot;KitchenAid 微波炉, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Kleencut&quot;'>
+            <value>&quot;Kleencut 尺子, 钢&quot;</value>
+            <value>&quot;Kleencut 尺子, 工业&quot;</value>
+            <value>&quot;Kleencut 尺子, 锯齿状&quot;</value>
+            <value>&quot;Kleencut 尺子, 蓝色&quot;</value>
+            <value>&quot;Kleencut 大剪刀, 钢&quot;</value>
+            <value>&quot;Kleencut 大剪刀, 工业&quot;</value>
+            <value>&quot;Kleencut 大剪刀, 锯齿状&quot;</value>
+            <value>&quot;Kleencut 大剪刀, 蓝色&quot;</value>
+            <value>&quot;Kleencut 剪刀, 钢&quot;</value>
+            <value>&quot;Kleencut 剪刀, 工业&quot;</value>
+            <value>&quot;Kleencut 剪刀, 锯齿状&quot;</value>
+            <value>&quot;Kleencut 剪刀, 蓝色&quot;</value>
+            <value>&quot;Kleencut 开信刀, 钢&quot;</value>
+            <value>&quot;Kleencut 开信刀, 工业&quot;</value>
+            <value>&quot;Kleencut 开信刀, 锯齿状&quot;</value>
+            <value>&quot;Kleencut 开信刀, 蓝色&quot;</value>
+            <value>&quot;Kleencut 美工刀, 钢&quot;</value>
+            <value>&quot;Kleencut 美工刀, 工业&quot;</value>
+            <value>&quot;Kleencut 美工刀, 锯齿状&quot;</value>
+            <value>&quot;Kleencut 美工刀, 蓝色&quot;</value>
+            <value>&quot;Kleencut 修剪器, 钢&quot;</value>
+            <value>&quot;Kleencut 修剪器, 工业&quot;</value>
+            <value>&quot;Kleencut 修剪器, 锯齿状&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Kraft&quot;'>
+            <value>&quot;Kraft 搭扣信封, 红色&quot;</value>
+            <value>&quot;Kraft 搭扣信封, 回收&quot;</value>
+            <value>&quot;Kraft 搭扣信封, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 搭扣信封, 银色&quot;</value>
+            <value>&quot;Kraft 局间信封, 红色&quot;</value>
+            <value>&quot;Kraft 局间信封, 回收&quot;</value>
+            <value>&quot;Kraft 局间信封, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 局间信封, 银色&quot;</value>
+            <value>&quot;Kraft 马尼拉纸信封, 红色&quot;</value>
+            <value>&quot;Kraft 马尼拉纸信封, 回收&quot;</value>
+            <value>&quot;Kraft 马尼拉纸信封, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 马尼拉纸信封, 银色&quot;</value>
+            <value>&quot;Kraft 商业信封, 红色&quot;</value>
+            <value>&quot;Kraft 商业信封, 回收&quot;</value>
+            <value>&quot;Kraft 商业信封, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 商业信封, 银色&quot;</value>
+            <value>&quot;Kraft 外皮和封条, 红色&quot;</value>
+            <value>&quot;Kraft 外皮和封条, 回收&quot;</value>
+            <value>&quot;Kraft 外皮和封条, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 外皮和封条, 银色&quot;</value>
+            <value>&quot;Kraft 邮寄品, 红色&quot;</value>
+            <value>&quot;Kraft 邮寄品, 回收&quot;</value>
+            <value>&quot;Kraft 邮寄品, 每套 50 个&quot;</value>
+            <value>&quot;Kraft 邮寄品, 银色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Lesro&quot;'>
+            <value>&quot;Lesro 电脑桌, 白色&quot;</value>
+            <value>&quot;Lesro 电脑桌, 长方形&quot;</value>
+            <value>&quot;Lesro 电脑桌, 黑色&quot;</value>
+            <value>&quot;Lesro 电脑桌, 组装&quot;</value>
+            <value>&quot;Lesro 会议桌, 白色&quot;</value>
+            <value>&quot;Lesro 会议桌, 组装&quot;</value>
+            <value>&quot;Lesro 咖啡桌, 黑色&quot;</value>
+            <value>&quot;Lesro 咖啡桌, 组装&quot;</value>
+            <value>&quot;Lesro 木桌, 白色&quot;</value>
+            <value>&quot;Lesro 木桌, 组装&quot;</value>
+            <value>&quot;Lesro 培训桌, 白色&quot;</value>
+            <value>&quot;Lesro 培训桌, 长方形&quot;</value>
+            <value>&quot;Lesro 培训桌, 黑色&quot;</value>
+            <value>&quot;Lesro 圆桌, 长方形&quot;</value>
+            <value>&quot;Lesro 圆桌, 黑色&quot;</value>
+            <value>&quot;Lesro 圆桌, 组装&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Memorex&quot;'>
+            <value>&quot;Memorex 记忆卡, 回收&quot;</value>
+            <value>&quot;Memorex 记忆卡, 可编程&quot;</value>
+            <value>&quot;Memorex 记忆卡, 耐用&quot;</value>
+            <value>&quot;Memorex 记忆卡, 实惠&quot;</value>
+            <value>&quot;Memorex 键盘, 回收&quot;</value>
+            <value>&quot;Memorex 键盘, 可编程&quot;</value>
+            <value>&quot;Memorex 键盘, 耐用&quot;</value>
+            <value>&quot;Memorex 键盘, 实惠&quot;</value>
+            <value>&quot;Memorex 键区, 回收&quot;</value>
+            <value>&quot;Memorex 键区, 可编程&quot;</value>
+            <value>&quot;Memorex 键区, 耐用&quot;</value>
+            <value>&quot;Memorex 键区, 实惠&quot;</value>
+            <value>&quot;Memorex 路由器, 回收&quot;</value>
+            <value>&quot;Memorex 路由器, 可编程&quot;</value>
+            <value>&quot;Memorex 路由器, 耐用&quot;</value>
+            <value>&quot;Memorex 路由器, 实惠&quot;</value>
+            <value>&quot;Memorex 闪存驱动器, 回收&quot;</value>
+            <value>&quot;Memorex 闪存驱动器, 可编程&quot;</value>
+            <value>&quot;Memorex 闪存驱动器, 耐用&quot;</value>
+            <value>&quot;Memorex 闪存驱动器, 实惠&quot;</value>
+            <value>&quot;Memorex 鼠标, 回收&quot;</value>
+            <value>&quot;Memorex 鼠标, 可编程&quot;</value>
+            <value>&quot;Memorex 鼠标, 耐用&quot;</value>
+            <value>&quot;Memorex 鼠标, 实惠&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Novimex&quot;'>
+            <value>&quot;Novimex 凳子, 黑色&quot;</value>
+            <value>&quot;Novimex 凳子, 红色&quot;</value>
+            <value>&quot;Novimex 凳子, 可调&quot;</value>
+            <value>&quot;Novimex 凳子, 每套两件&quot;</value>
+            <value>&quot;Novimex 扶手椅, 黑色&quot;</value>
+            <value>&quot;Novimex 扶手椅, 红色&quot;</value>
+            <value>&quot;Novimex 扶手椅, 可调&quot;</value>
+            <value>&quot;Novimex 扶手椅, 每套两件&quot;</value>
+            <value>&quot;Novimex 合法证物标签, 白色&quot;</value>
+            <value>&quot;Novimex 合法证物标签, 红色&quot;</value>
+            <value>&quot;Novimex 合法证物标签, 可调&quot;</value>
+            <value>&quot;Novimex 合法证物标签, 耐用&quot;</value>
+            <value>&quot;Novimex 可去除的标签, 白色&quot;</value>
+            <value>&quot;Novimex 可去除的标签, 红色&quot;</value>
+            <value>&quot;Novimex 可去除的标签, 可调&quot;</value>
+            <value>&quot;Novimex 可去除的标签, 耐用&quot;</value>
+            <value>&quot;Novimex 沙滩椅, 黑色&quot;</value>
+            <value>&quot;Novimex 沙滩椅, 红色&quot;</value>
+            <value>&quot;Novimex 沙滩椅, 可调&quot;</value>
+            <value>&quot;Novimex 沙滩椅, 每套两件&quot;</value>
+            <value>&quot;Novimex 文件夹标签, 白色&quot;</value>
+            <value>&quot;Novimex 文件夹标签, 红色&quot;</value>
+            <value>&quot;Novimex 文件夹标签, 可调&quot;</value>
+            <value>&quot;Novimex 文件夹标签, 耐用&quot;</value>
+            <value>&quot;Novimex 摇椅, 黑色&quot;</value>
+            <value>&quot;Novimex 摇椅, 红色&quot;</value>
+            <value>&quot;Novimex 摇椅, 可调&quot;</value>
+            <value>&quot;Novimex 摇椅, 每套两件&quot;</value>
+            <value>&quot;Novimex 椅垫, 黑色&quot;</value>
+            <value>&quot;Novimex 椅垫, 红色&quot;</value>
+            <value>&quot;Novimex 椅垫, 可调&quot;</value>
+            <value>&quot;Novimex 椅垫, 每套两件&quot;</value>
+            <value>&quot;Novimex 有色标签, 白色&quot;</value>
+            <value>&quot;Novimex 有色标签, 红色&quot;</value>
+            <value>&quot;Novimex 有色标签, 可调&quot;</value>
+            <value>&quot;Novimex 有色标签, 耐用&quot;</value>
+            <value>&quot;Novimex 圆形标签, 白色&quot;</value>
+            <value>&quot;Novimex 圆形标签, 红色&quot;</value>
+            <value>&quot;Novimex 圆形标签, 可调&quot;</value>
+            <value>&quot;Novimex 圆形标签, 耐用&quot;</value>
+            <value>&quot;Novimex 运输标签, 白色&quot;</value>
+            <value>&quot;Novimex 运输标签, 红色&quot;</value>
+            <value>&quot;Novimex 运输标签, 可调&quot;</value>
+            <value>&quot;Novimex 运输标签, 耐用&quot;</value>
+            <value>&quot;Novimex 折叠椅, 黑色&quot;</value>
+            <value>&quot;Novimex 折叠椅, 红色&quot;</value>
+            <value>&quot;Novimex 折叠椅, 可调&quot;</value>
+            <value>&quot;Novimex 折叠椅, 每套两件&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Office Star&quot;'>
+            <value>&quot;Office Star 凳子, 黑色&quot;</value>
+            <value>&quot;Office Star 凳子, 红色&quot;</value>
+            <value>&quot;Office Star 凳子, 可调&quot;</value>
+            <value>&quot;Office Star 凳子, 每套两件&quot;</value>
+            <value>&quot;Office Star 扶手椅, 黑色&quot;</value>
+            <value>&quot;Office Star 扶手椅, 红色&quot;</value>
+            <value>&quot;Office Star 扶手椅, 可调&quot;</value>
+            <value>&quot;Office Star 扶手椅, 每套两件&quot;</value>
+            <value>&quot;Office Star 沙滩椅, 黑色&quot;</value>
+            <value>&quot;Office Star 沙滩椅, 红色&quot;</value>
+            <value>&quot;Office Star 沙滩椅, 可调&quot;</value>
+            <value>&quot;Office Star 沙滩椅, 每套两件&quot;</value>
+            <value>&quot;Office Star 摇椅, 黑色&quot;</value>
+            <value>&quot;Office Star 摇椅, 红色&quot;</value>
+            <value>&quot;Office Star 摇椅, 可调&quot;</value>
+            <value>&quot;Office Star 摇椅, 每套两件&quot;</value>
+            <value>&quot;Office Star 椅垫, 黑色&quot;</value>
+            <value>&quot;Office Star 椅垫, 红色&quot;</value>
+            <value>&quot;Office Star 椅垫, 可调&quot;</value>
+            <value>&quot;Office Star 椅垫, 每套两件&quot;</value>
+            <value>&quot;Office Star 折叠椅, 黑色&quot;</value>
+            <value>&quot;Office Star 折叠椅, 红色&quot;</value>
+            <value>&quot;Office Star 折叠椅, 可调&quot;</value>
+            <value>&quot;Office Star 折叠椅, 每套两件&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;OIC&quot;'>
+            <value>&quot;OIC 按钉, 混合尺寸&quot;</value>
+            <value>&quot;OIC 按钉, 金属&quot;</value>
+            <value>&quot;OIC 按钉, 每包 12 个&quot;</value>
+            <value>&quot;OIC 按钉, 整包&quot;</value>
+            <value>&quot;OIC 订书钉, 混合尺寸&quot;</value>
+            <value>&quot;OIC 订书钉, 金属&quot;</value>
+            <value>&quot;OIC 订书钉, 每包 12 个&quot;</value>
+            <value>&quot;OIC 订书钉, 整包&quot;</value>
+            <value>&quot;OIC 回形针, 混合尺寸&quot;</value>
+            <value>&quot;OIC 回形针, 金属&quot;</value>
+            <value>&quot;OIC 回形针, 每包 12 个&quot;</value>
+            <value>&quot;OIC 回形针, 整包&quot;</value>
+            <value>&quot;OIC 夹子, 混合尺寸&quot;</value>
+            <value>&quot;OIC 夹子, 金属&quot;</value>
+            <value>&quot;OIC 夹子, 每包 12 个&quot;</value>
+            <value>&quot;OIC 夹子, 整包&quot;</value>
+            <value>&quot;OIC 图钉, 混合尺寸&quot;</value>
+            <value>&quot;OIC 图钉, 金属&quot;</value>
+            <value>&quot;OIC 图钉, 每包 12 个&quot;</value>
+            <value>&quot;OIC 图钉, 整包&quot;</value>
+            <value>&quot;OIC 橡皮筋, 混合尺寸&quot;</value>
+            <value>&quot;OIC 橡皮筋, 金属&quot;</value>
+            <value>&quot;OIC 橡皮筋, 每包 12 个&quot;</value>
+            <value>&quot;OIC 橡皮筋, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Rogers&quot;'>
+            <value>&quot;Rogers 搁板, 单宽度&quot;</value>
+            <value>&quot;Rogers 搁板, 工业&quot;</value>
+            <value>&quot;Rogers 搁板, 金属&quot;</value>
+            <value>&quot;Rogers 盒, 单宽度&quot;</value>
+            <value>&quot;Rogers 盒, 工业&quot;</value>
+            <value>&quot;Rogers 盒, 金属&quot;</value>
+            <value>&quot;Rogers 盒, 蓝色&quot;</value>
+            <value>&quot;Rogers 盘, 单宽度&quot;</value>
+            <value>&quot;Rogers 盘, 工业&quot;</value>
+            <value>&quot;Rogers 盘, 金属&quot;</value>
+            <value>&quot;Rogers 盘, 蓝色&quot;</value>
+            <value>&quot;Rogers 锁柜, 单宽度&quot;</value>
+            <value>&quot;Rogers 锁柜, 工业&quot;</value>
+            <value>&quot;Rogers 锁柜, 金属&quot;</value>
+            <value>&quot;Rogers 锁柜, 蓝色&quot;</value>
+            <value>&quot;Rogers 文件车, 单宽度&quot;</value>
+            <value>&quot;Rogers 文件车, 工业&quot;</value>
+            <value>&quot;Rogers 文件车, 金属&quot;</value>
+            <value>&quot;Rogers 文件车, 蓝色&quot;</value>
+            <value>&quot;Rogers 文件夹, 单宽度&quot;</value>
+            <value>&quot;Rogers 文件夹, 工业&quot;</value>
+            <value>&quot;Rogers 文件夹, 金属&quot;</value>
+            <value>&quot;Rogers 文件夹, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Rubbermaid&quot;'>
+            <value>&quot;Rubvermaid 灯泡, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 灯泡, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 灯泡, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 灯泡, 优质&quot;</value>
+            <value>&quot;Rubvermaid 分层置放架, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 分层置放架, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 分层置放架, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 分层置放架, 优质&quot;</value>
+            <value>&quot;Rubvermaid 框架, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 框架, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 框架, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 框架, 优质&quot;</value>
+            <value>&quot;Rubvermaid 门挡, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 门挡, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 门挡, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 门挡, 优质&quot;</value>
+            <value>&quot;Rubvermaid 闹钟, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 闹钟, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 闹钟, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 闹钟, 优质&quot;</value>
+            <value>&quot;Rubvermaid 相框, 黑色&quot;</value>
+            <value>&quot;Rubvermaid 相框, 耐用&quot;</value>
+            <value>&quot;Rubvermaid 相框, 一包多件&quot;</value>
+            <value>&quot;Rubvermaid 相框, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Safco&quot;'>
+            <value>&quot;SAFCO 凳子, 黑色&quot;</value>
+            <value>&quot;SAFCO 凳子, 红色&quot;</value>
+            <value>&quot;SAFCO 凳子, 可调&quot;</value>
+            <value>&quot;SAFCO 凳子, 每套两件&quot;</value>
+            <value>&quot;SAFCO 扶手椅, 黑色&quot;</value>
+            <value>&quot;SAFCO 扶手椅, 红色&quot;</value>
+            <value>&quot;SAFCO 扶手椅, 可调&quot;</value>
+            <value>&quot;SAFCO 扶手椅, 每套两件&quot;</value>
+            <value>&quot;Safco 搁架, 白色&quot;</value>
+            <value>&quot;Safco 搁架, 传统&quot;</value>
+            <value>&quot;Safco 搁架, 黑色&quot;</value>
+            <value>&quot;Safco 搁架, 金属&quot;</value>
+            <value>&quot;Safco 古典书架, 白色&quot;</value>
+            <value>&quot;Safco 古典书架, 传统&quot;</value>
+            <value>&quot;Safco 古典书架, 黑色&quot;</value>
+            <value>&quot;Safco 古典书架, 金属&quot;</value>
+            <value>&quot;Safco 柜, 白色&quot;</value>
+            <value>&quot;Safco 柜, 传统&quot;</value>
+            <value>&quot;Safco 柜, 黑色&quot;</value>
+            <value>&quot;Safco 柜, 金属&quot;</value>
+            <value>&quot;Safco 墙角架, 白色&quot;</value>
+            <value>&quot;Safco 墙角架, 传统&quot;</value>
+            <value>&quot;Safco 墙角架, 黑色&quot;</value>
+            <value>&quot;Safco 墙角架, 金属&quot;</value>
+            <value>&quot;SAFCO 沙滩椅, 黑色&quot;</value>
+            <value>&quot;SAFCO 沙滩椅, 红色&quot;</value>
+            <value>&quot;SAFCO 沙滩椅, 可调&quot;</value>
+            <value>&quot;SAFCO 沙滩椅, 每套两件&quot;</value>
+            <value>&quot;Safco 书架, 白色&quot;</value>
+            <value>&quot;Safco 书架, 传统&quot;</value>
+            <value>&quot;Safco 书架, 黑色&quot;</value>
+            <value>&quot;Safco 书架, 金属&quot;</value>
+            <value>&quot;Safco 书库, 白色&quot;</value>
+            <value>&quot;Safco 书库, 传统&quot;</value>
+            <value>&quot;Safco 书库, 黑色&quot;</value>
+            <value>&quot;Safco 书库, 金属&quot;</value>
+            <value>&quot;SAFCO 摇椅, 黑色&quot;</value>
+            <value>&quot;SAFCO 摇椅, 红色&quot;</value>
+            <value>&quot;SAFCO 摇椅, 可调&quot;</value>
+            <value>&quot;SAFCO 摇椅, 每套两件&quot;</value>
+            <value>&quot;SAFCO 椅垫, 黑色&quot;</value>
+            <value>&quot;SAFCO 椅垫, 红色&quot;</value>
+            <value>&quot;SAFCO 椅垫, 可调&quot;</value>
+            <value>&quot;SAFCO 椅垫, 每套两件&quot;</value>
+            <value>&quot;SAFCO 折叠椅, 黑色&quot;</value>
+            <value>&quot;SAFCO 折叠椅, 红色&quot;</value>
+            <value>&quot;SAFCO 折叠椅, 可调&quot;</value>
+            <value>&quot;SAFCO 折叠椅, 每套两件&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;SanDisk&quot;'>
+            <value>&quot;SanDisk 备忘录便条, 多色&quot;</value>
+            <value>&quot;SanDisk 备忘录便条, 回收&quot;</value>
+            <value>&quot;SanDisk 备忘录便条, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 备忘录便条, 优质&quot;</value>
+            <value>&quot;SanDisk 笔记本, 多色&quot;</value>
+            <value>&quot;SanDisk 笔记本, 回收&quot;</value>
+            <value>&quot;SanDisk 笔记本, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 笔记本, 优质&quot;</value>
+            <value>&quot;SanDisk 计划信息表, 多色&quot;</value>
+            <value>&quot;SanDisk 计划信息表, 回收&quot;</value>
+            <value>&quot;SanDisk 计划信息表, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 计划信息表, 优质&quot;</value>
+            <value>&quot;SanDisk 记忆卡, 回收&quot;</value>
+            <value>&quot;SanDisk 记忆卡, 可编程&quot;</value>
+            <value>&quot;SanDisk 记忆卡, 耐用&quot;</value>
+            <value>&quot;SanDisk 记忆卡, 实惠&quot;</value>
+            <value>&quot;SanDisk 键盘, 回收&quot;</value>
+            <value>&quot;SanDisk 键盘, 可编程&quot;</value>
+            <value>&quot;SanDisk 键盘, 耐用&quot;</value>
+            <value>&quot;SanDisk 键盘, 实惠&quot;</value>
+            <value>&quot;SanDisk 键区, 回收&quot;</value>
+            <value>&quot;SanDisk 键区, 可编程&quot;</value>
+            <value>&quot;SanDisk 键区, 耐用&quot;</value>
+            <value>&quot;SanDisk 键区, 实惠&quot;</value>
+            <value>&quot;SanDisk 令, 多色&quot;</value>
+            <value>&quot;SanDisk 令, 回收&quot;</value>
+            <value>&quot;SanDisk 令, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 令, 优质&quot;</value>
+            <value>&quot;SanDisk 路由器, 回收&quot;</value>
+            <value>&quot;SanDisk 路由器, 可编程&quot;</value>
+            <value>&quot;SanDisk 路由器, 耐用&quot;</value>
+            <value>&quot;SanDisk 路由器, 实惠&quot;</value>
+            <value>&quot;SanDisk 闪存驱动器, 回收&quot;</value>
+            <value>&quot;SanDisk 闪存驱动器, 可编程&quot;</value>
+            <value>&quot;SanDisk 闪存驱动器, 耐用&quot;</value>
+            <value>&quot;SanDisk 闪存驱动器, 实惠&quot;</value>
+            <value>&quot;SanDisk 鼠标, 回收&quot;</value>
+            <value>&quot;SanDisk 鼠标, 可编程&quot;</value>
+            <value>&quot;SanDisk 鼠标, 耐用&quot;</value>
+            <value>&quot;SanDisk 鼠标, 实惠&quot;</value>
+            <value>&quot;SanDisk 信纸, 多色&quot;</value>
+            <value>&quot;SanDisk 信纸, 回收&quot;</value>
+            <value>&quot;SanDisk 信纸, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 信纸, 优质&quot;</value>
+            <value>&quot;SanDisk 羊皮纸, 多色&quot;</value>
+            <value>&quot;SanDisk 羊皮纸, 回收&quot;</value>
+            <value>&quot;SanDisk 羊皮纸, 每包 12 个&quot;</value>
+            <value>&quot;SanDisk 羊皮纸, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Sanford&quot;'>
+            <value>&quot;Sanford 钢笔, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 钢笔, 金属&quot;</value>
+            <value>&quot;Sanford 钢笔, 蓝色&quot;</value>
+            <value>&quot;Sanford 钢笔, 整包&quot;</value>
+            <value>&quot;Sanford 画布, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 画布, 金属&quot;</value>
+            <value>&quot;Sanford 画布, 蓝色&quot;</value>
+            <value>&quot;Sanford 画布, 整包&quot;</value>
+            <value>&quot;Sanford 记号笔, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 记号笔, 金属&quot;</value>
+            <value>&quot;Sanford 记号笔, 整包&quot;</value>
+            <value>&quot;Sanford 铅笔刀, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 铅笔刀, 金属&quot;</value>
+            <value>&quot;Sanford 铅笔刀, 蓝色&quot;</value>
+            <value>&quot;Sanford 铅笔刀, 整包&quot;</value>
+            <value>&quot;Sanford 速写本, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 速写本, 金属&quot;</value>
+            <value>&quot;Sanford 速写本, 整包&quot;</value>
+            <value>&quot;Sanford 荧光笔, 混合尺寸&quot;</value>
+            <value>&quot;Sanford 荧光笔, 金属&quot;</value>
+            <value>&quot;Sanford 荧光笔, 蓝色&quot;</value>
+            <value>&quot;Sanford 荧光笔, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Sauder&quot;'>
+            <value>&quot;Sauder 搁架, 白色&quot;</value>
+            <value>&quot;Sauder 搁架, 传统&quot;</value>
+            <value>&quot;Sauder 搁架, 黑色&quot;</value>
+            <value>&quot;Sauder 搁架, 金属&quot;</value>
+            <value>&quot;Sauder 古典书架, 白色&quot;</value>
+            <value>&quot;Sauder 古典书架, 传统&quot;</value>
+            <value>&quot;Sauder 古典书架, 黑色&quot;</value>
+            <value>&quot;Sauder 古典书架, 金属&quot;</value>
+            <value>&quot;Sauder 柜, 白色&quot;</value>
+            <value>&quot;Sauder 柜, 传统&quot;</value>
+            <value>&quot;Sauder 柜, 黑色&quot;</value>
+            <value>&quot;Sauder 柜, 金属&quot;</value>
+            <value>&quot;Sauder 墙角架, 白色&quot;</value>
+            <value>&quot;Sauder 墙角架, 传统&quot;</value>
+            <value>&quot;Sauder 墙角架, 黑色&quot;</value>
+            <value>&quot;Sauder 墙角架, 金属&quot;</value>
+            <value>&quot;Sauder 书架, 白色&quot;</value>
+            <value>&quot;Sauder 书架, 传统&quot;</value>
+            <value>&quot;Sauder 书架, 黑色&quot;</value>
+            <value>&quot;Sauder 书架, 金属&quot;</value>
+            <value>&quot;Sauder 书库, 白色&quot;</value>
+            <value>&quot;Sauder 书库, 传统&quot;</value>
+            <value>&quot;Sauder 书库, 黑色&quot;</value>
+            <value>&quot;Sauder 书库, 金属&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Smead&quot;'>
+            <value>&quot;Smead 搁板, 单宽度&quot;</value>
+            <value>&quot;Smead 搁板, 工业&quot;</value>
+            <value>&quot;Smead 搁板, 金属&quot;</value>
+            <value>&quot;Smead 搁板, 蓝色&quot;</value>
+            <value>&quot;Smead 合法证物标签, 白色&quot;</value>
+            <value>&quot;Smead 合法证物标签, 红色&quot;</value>
+            <value>&quot;Smead 合法证物标签, 可调&quot;</value>
+            <value>&quot;Smead 合法证物标签, 耐用&quot;</value>
+            <value>&quot;Smead 盒, 单宽度&quot;</value>
+            <value>&quot;Smead 盒, 工业&quot;</value>
+            <value>&quot;Smead 盒, 金属&quot;</value>
+            <value>&quot;Smead 盒, 蓝色&quot;</value>
+            <value>&quot;Smead 可去除的标签, 白色&quot;</value>
+            <value>&quot;Smead 可去除的标签, 红色&quot;</value>
+            <value>&quot;Smead 可去除的标签, 可调&quot;</value>
+            <value>&quot;Smead 可去除的标签, 耐用&quot;</value>
+            <value>&quot;Smead 盘, 单宽度&quot;</value>
+            <value>&quot;Smead 盘, 工业&quot;</value>
+            <value>&quot;Smead 盘, 金属&quot;</value>
+            <value>&quot;Smead 盘, 蓝色&quot;</value>
+            <value>&quot;Smead 锁柜, 单宽度&quot;</value>
+            <value>&quot;Smead 锁柜, 工业&quot;</value>
+            <value>&quot;Smead 锁柜, 金属&quot;</value>
+            <value>&quot;Smead 锁柜, 蓝色&quot;</value>
+            <value>&quot;Smead 文件车, 单宽度&quot;</value>
+            <value>&quot;Smead 文件车, 工业&quot;</value>
+            <value>&quot;Smead 文件车, 金属&quot;</value>
+            <value>&quot;Smead 文件车, 蓝色&quot;</value>
+            <value>&quot;Smead 文件夹, 单宽度&quot;</value>
+            <value>&quot;Smead 文件夹, 工业&quot;</value>
+            <value>&quot;Smead 文件夹, 金属&quot;</value>
+            <value>&quot;Smead 文件夹, 蓝色&quot;</value>
+            <value>&quot;Smead 文件夹标签, 白色&quot;</value>
+            <value>&quot;Smead 文件夹标签, 红色&quot;</value>
+            <value>&quot;Smead 文件夹标签, 可调&quot;</value>
+            <value>&quot;Smead 文件夹标签, 耐用&quot;</value>
+            <value>&quot;Smead 有色标签, 白色&quot;</value>
+            <value>&quot;Smead 有色标签, 红色&quot;</value>
+            <value>&quot;Smead 有色标签, 可调&quot;</value>
+            <value>&quot;Smead 有色标签, 耐用&quot;</value>
+            <value>&quot;Smead 圆形标签, 白色&quot;</value>
+            <value>&quot;Smead 圆形标签, 红色&quot;</value>
+            <value>&quot;Smead 圆形标签, 可调&quot;</value>
+            <value>&quot;Smead 圆形标签, 耐用&quot;</value>
+            <value>&quot;Smead 运输标签, 白色&quot;</value>
+            <value>&quot;Smead 运输标签, 红色&quot;</value>
+            <value>&quot;Smead 运输标签, 可调&quot;</value>
+            <value>&quot;Smead 运输标签, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Stanley&quot;'>
+            <value>&quot;Stanley 钢笔, 混合尺寸&quot;</value>
+            <value>&quot;Stanley 钢笔, 金属&quot;</value>
+            <value>&quot;Stanley 钢笔, 蓝色&quot;</value>
+            <value>&quot;Stanley 钢笔, 整包&quot;</value>
+            <value>&quot;Stanley 画布, 金属&quot;</value>
+            <value>&quot;Stanley 画布, 蓝色&quot;</value>
+            <value>&quot;Stanley 画布, 整包&quot;</value>
+            <value>&quot;Stanley 记号笔, 混合尺寸&quot;</value>
+            <value>&quot;Stanley 记号笔, 金属&quot;</value>
+            <value>&quot;Stanley 记号笔, 蓝色&quot;</value>
+            <value>&quot;Stanley 记号笔, 整包&quot;</value>
+            <value>&quot;Stanley 铅笔刀, 混合尺寸&quot;</value>
+            <value>&quot;Stanley 铅笔刀, 金属&quot;</value>
+            <value>&quot;Stanley 铅笔刀, 蓝色&quot;</value>
+            <value>&quot;Stanley 铅笔刀, 整包&quot;</value>
+            <value>&quot;Stanley 速写本, 混合尺寸&quot;</value>
+            <value>&quot;Stanley 速写本, 金属&quot;</value>
+            <value>&quot;Stanley 速写本, 蓝色&quot;</value>
+            <value>&quot;Stanley 速写本, 整包&quot;</value>
+            <value>&quot;Stanley 荧光笔, 混合尺寸&quot;</value>
+            <value>&quot;Stanley 荧光笔, 金属&quot;</value>
+            <value>&quot;Stanley 荧光笔, 蓝色&quot;</value>
+            <value>&quot;Stanley 荧光笔, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;StarTech&quot;'>
+            <value>&quot;StarTech 打印机, 白色&quot;</value>
+            <value>&quot;StarTech 打印机, 多色&quot;</value>
+            <value>&quot;StarTech 打印机, 红色&quot;</value>
+            <value>&quot;StarTech 打印机, 耐用&quot;</value>
+            <value>&quot;StarTech 电话, 白色&quot;</value>
+            <value>&quot;StarTech 电话, 多色&quot;</value>
+            <value>&quot;StarTech 电话, 红色&quot;</value>
+            <value>&quot;StarTech 电话, 耐用&quot;</value>
+            <value>&quot;StarTech 计算器, 白色&quot;</value>
+            <value>&quot;StarTech 计算器, 多色&quot;</value>
+            <value>&quot;StarTech 计算器, 红色&quot;</value>
+            <value>&quot;StarTech 计算器, 耐用&quot;</value>
+            <value>&quot;StarTech 卡片打印机, 白色&quot;</value>
+            <value>&quot;StarTech 卡片打印机, 多色&quot;</value>
+            <value>&quot;StarTech 卡片打印机, 红色&quot;</value>
+            <value>&quot;StarTech 卡片打印机, 耐用&quot;</value>
+            <value>&quot;StarTech 喷墨打印机, 白色&quot;</value>
+            <value>&quot;StarTech 喷墨打印机, 多色&quot;</value>
+            <value>&quot;StarTech 喷墨打印机, 红色&quot;</value>
+            <value>&quot;StarTech 喷墨打印机, 耐用&quot;</value>
+            <value>&quot;StarTech 收据打印机, 白色&quot;</value>
+            <value>&quot;StarTech 收据打印机, 多色&quot;</value>
+            <value>&quot;StarTech 收据打印机, 红色&quot;</value>
+            <value>&quot;StarTech 收据打印机, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Stiletto&quot;'>
+            <value>&quot;Stiletto 尺子, 钢&quot;</value>
+            <value>&quot;Stiletto 尺子, 工业&quot;</value>
+            <value>&quot;Stiletto 尺子, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 尺子, 蓝色&quot;</value>
+            <value>&quot;Stiletto 大剪刀, 钢&quot;</value>
+            <value>&quot;Stiletto 大剪刀, 工业&quot;</value>
+            <value>&quot;Stiletto 大剪刀, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 大剪刀, 蓝色&quot;</value>
+            <value>&quot;Stiletto 剪刀, 钢&quot;</value>
+            <value>&quot;Stiletto 剪刀, 工业&quot;</value>
+            <value>&quot;Stiletto 剪刀, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 剪刀, 蓝色&quot;</value>
+            <value>&quot;Stiletto 开信刀, 钢&quot;</value>
+            <value>&quot;Stiletto 开信刀, 工业&quot;</value>
+            <value>&quot;Stiletto 开信刀, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 开信刀, 蓝色&quot;</value>
+            <value>&quot;Stiletto 美工刀, 钢&quot;</value>
+            <value>&quot;Stiletto 美工刀, 工业&quot;</value>
+            <value>&quot;Stiletto 美工刀, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 美工刀, 蓝色&quot;</value>
+            <value>&quot;Stiletto 修剪器, 钢&quot;</value>
+            <value>&quot;Stiletto 修剪器, 工业&quot;</value>
+            <value>&quot;Stiletto 修剪器, 锯齿状&quot;</value>
+            <value>&quot;Stiletto 修剪器, 蓝色&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Stockwell&quot;'>
+            <value>&quot;Stockwell 按钉, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 按钉, 金属&quot;</value>
+            <value>&quot;Stockwell 按钉, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 按钉, 整包&quot;</value>
+            <value>&quot;Stockwell 订书钉, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 订书钉, 金属&quot;</value>
+            <value>&quot;Stockwell 订书钉, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 订书钉, 整包&quot;</value>
+            <value>&quot;Stockwell 回形针, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 回形针, 金属&quot;</value>
+            <value>&quot;Stockwell 回形针, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 回形针, 整包&quot;</value>
+            <value>&quot;Stockwell 夹子, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 夹子, 金属&quot;</value>
+            <value>&quot;Stockwell 夹子, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 夹子, 整包&quot;</value>
+            <value>&quot;Stockwell 图钉, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 图钉, 金属&quot;</value>
+            <value>&quot;Stockwell 图钉, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 图钉, 整包&quot;</value>
+            <value>&quot;Stockwell 橡皮筋, 混合尺寸&quot;</value>
+            <value>&quot;Stockwell 橡皮筋, 金属&quot;</value>
+            <value>&quot;Stockwell 橡皮筋, 每包 12 个&quot;</value>
+            <value>&quot;Stockwell 橡皮筋, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Tenex&quot;'>
+            <value>&quot;Tenex 灯泡, 黑色&quot;</value>
+            <value>&quot;Tenex 灯泡, 耐用&quot;</value>
+            <value>&quot;Tenex 灯泡, 一包多件&quot;</value>
+            <value>&quot;Tenex 灯泡, 优质&quot;</value>
+            <value>&quot;Tenex 分层置放架, 黑色&quot;</value>
+            <value>&quot;Tenex 分层置放架, 耐用&quot;</value>
+            <value>&quot;Tenex 分层置放架, 一包多件&quot;</value>
+            <value>&quot;Tenex 分层置放架, 优质&quot;</value>
+            <value>&quot;Tenex 搁板, 单宽度&quot;</value>
+            <value>&quot;Tenex 搁板, 工业&quot;</value>
+            <value>&quot;Tenex 搁板, 金属&quot;</value>
+            <value>&quot;Tenex 搁板, 蓝色&quot;</value>
+            <value>&quot;Tenex 盒, 单宽度&quot;</value>
+            <value>&quot;Tenex 盒, 工业&quot;</value>
+            <value>&quot;Tenex 盒, 金属&quot;</value>
+            <value>&quot;Tenex 盒, 蓝色&quot;</value>
+            <value>&quot;Tenex 框架, 黑色&quot;</value>
+            <value>&quot;Tenex 框架, 耐用&quot;</value>
+            <value>&quot;Tenex 框架, 一包多件&quot;</value>
+            <value>&quot;Tenex 框架, 优质&quot;</value>
+            <value>&quot;Tenex 门挡, 黑色&quot;</value>
+            <value>&quot;Tenex 门挡, 耐用&quot;</value>
+            <value>&quot;Tenex 门挡, 一包多件&quot;</value>
+            <value>&quot;Tenex 门挡, 优质&quot;</value>
+            <value>&quot;Tenex 闹钟, 耐用&quot;</value>
+            <value>&quot;Tenex 闹钟, 一包多件&quot;</value>
+            <value>&quot;Tenex 闹钟, 优质&quot;</value>
+            <value>&quot;Tenex 盘, 单宽度&quot;</value>
+            <value>&quot;Tenex 盘, 工业&quot;</value>
+            <value>&quot;Tenex 盘, 金属&quot;</value>
+            <value>&quot;Tenex 盘, 蓝色&quot;</value>
+            <value>&quot;Tenex 锁柜, 单宽度&quot;</value>
+            <value>&quot;Tenex 锁柜, 工业&quot;</value>
+            <value>&quot;Tenex 锁柜, 金属&quot;</value>
+            <value>&quot;Tenex 锁柜, 蓝色&quot;</value>
+            <value>&quot;Tenex 文件车, 单宽度&quot;</value>
+            <value>&quot;Tenex 文件车, 工业&quot;</value>
+            <value>&quot;Tenex 文件车, 金属&quot;</value>
+            <value>&quot;Tenex 文件车, 蓝色&quot;</value>
+            <value>&quot;Tenex 文件夹, 单宽度&quot;</value>
+            <value>&quot;Tenex 文件夹, 工业&quot;</value>
+            <value>&quot;Tenex 文件夹, 金属&quot;</value>
+            <value>&quot;Tenex 文件夹, 蓝色&quot;</value>
+            <value>&quot;Tenex 相框, 黑色&quot;</value>
+            <value>&quot;Tenex 相框, 耐用&quot;</value>
+            <value>&quot;Tenex 相框, 一包多件&quot;</value>
+            <value>&quot;Tenex 相框, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Wilson Jones&quot;'>
+            <value>&quot;Wilson Jones 标签, 回收&quot;</value>
+            <value>&quot;Wilson Jones 标签, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 标签, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 标签, 透明&quot;</value>
+            <value>&quot;Wilson Jones 打孔机, 回收&quot;</value>
+            <value>&quot;Wilson Jones 打孔机, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 打孔机, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 打孔机, 透明&quot;</value>
+            <value>&quot;Wilson Jones 订书机, 回收&quot;</value>
+            <value>&quot;Wilson Jones 订书机, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 订书机, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 订书机, 透明&quot;</value>
+            <value>&quot;Wilson Jones 孔加固材料, 回收&quot;</value>
+            <value>&quot;Wilson Jones 孔加固材料, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 孔加固材料, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 孔加固材料, 透明&quot;</value>
+            <value>&quot;Wilson Jones 装订机, 回收&quot;</value>
+            <value>&quot;Wilson Jones 装订机, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 装订机, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 装订机, 透明&quot;</value>
+            <value>&quot;Wilson Jones 装订机盖, 回收&quot;</value>
+            <value>&quot;Wilson Jones 装订机盖, 耐用&quot;</value>
+            <value>&quot;Wilson Jones 装订机盖, 实惠&quot;</value>
+            <value>&quot;Wilson Jones 装订机盖, 透明&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;爱普生&quot;'>
+            <value>&quot;爱普生 打印机, 白色&quot;</value>
+            <value>&quot;爱普生 打印机, 多色&quot;</value>
+            <value>&quot;爱普生 电话, 红色&quot;</value>
+            <value>&quot;爱普生 电话, 耐用&quot;</value>
+            <value>&quot;爱普生 计算器, 白色&quot;</value>
+            <value>&quot;爱普生 计算器, 多色&quot;</value>
+            <value>&quot;爱普生 计算器, 红色&quot;</value>
+            <value>&quot;爱普生 计算器, 耐用&quot;</value>
+            <value>&quot;爱普生 卡片打印机, 白色&quot;</value>
+            <value>&quot;爱普生 卡片打印机, 多色&quot;</value>
+            <value>&quot;爱普生 卡片打印机, 红色&quot;</value>
+            <value>&quot;爱普生 卡片打印机, 耐用&quot;</value>
+            <value>&quot;爱普生 喷墨打印机, 白色&quot;</value>
+            <value>&quot;爱普生 喷墨打印机, 多色&quot;</value>
+            <value>&quot;爱普生 喷墨打印机, 红色&quot;</value>
+            <value>&quot;爱普生 喷墨打印机, 耐用&quot;</value>
+            <value>&quot;爱普生 收据打印机, 红色&quot;</value>
+            <value>&quot;爱普生 收据打印机, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;贝尔金&quot;'>
+            <value>&quot;贝尔金 记忆卡, 回收&quot;</value>
+            <value>&quot;贝尔金 记忆卡, 可编程&quot;</value>
+            <value>&quot;贝尔金 记忆卡, 耐用&quot;</value>
+            <value>&quot;贝尔金 记忆卡, 实惠&quot;</value>
+            <value>&quot;贝尔金 键盘, 回收&quot;</value>
+            <value>&quot;贝尔金 键盘, 可编程&quot;</value>
+            <value>&quot;贝尔金 键盘, 耐用&quot;</value>
+            <value>&quot;贝尔金 键盘, 实惠&quot;</value>
+            <value>&quot;贝尔金 键区, 回收&quot;</value>
+            <value>&quot;贝尔金 键区, 可编程&quot;</value>
+            <value>&quot;贝尔金 键区, 耐用&quot;</value>
+            <value>&quot;贝尔金 键区, 实惠&quot;</value>
+            <value>&quot;贝尔金 路由器, 回收&quot;</value>
+            <value>&quot;贝尔金 路由器, 可编程&quot;</value>
+            <value>&quot;贝尔金 路由器, 耐用&quot;</value>
+            <value>&quot;贝尔金 路由器, 实惠&quot;</value>
+            <value>&quot;贝尔金 闪存驱动器, 回收&quot;</value>
+            <value>&quot;贝尔金 闪存驱动器, 可编程&quot;</value>
+            <value>&quot;贝尔金 闪存驱动器, 耐用&quot;</value>
+            <value>&quot;贝尔金 闪存驱动器, 实惠&quot;</value>
+            <value>&quot;贝尔金 鼠标, 回收&quot;</value>
+            <value>&quot;贝尔金 鼠标, 可编程&quot;</value>
+            <value>&quot;贝尔金 鼠标, 耐用&quot;</value>
+            <value>&quot;贝尔金 鼠标, 实惠&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;冲电器&quot;'>
+            <value>&quot;冲电器 打印机, 白色&quot;</value>
+            <value>&quot;冲电器 打印机, 红色&quot;</value>
+            <value>&quot;冲电器 打印机, 耐用&quot;</value>
+            <value>&quot;冲电器 电话, 白色&quot;</value>
+            <value>&quot;冲电器 电话, 红色&quot;</value>
+            <value>&quot;冲电器 电话, 耐用&quot;</value>
+            <value>&quot;冲电器 计算器, 白色&quot;</value>
+            <value>&quot;冲电器 计算器, 红色&quot;</value>
+            <value>&quot;冲电器 计算器, 耐用&quot;</value>
+            <value>&quot;冲电器 卡片打印机, 白色&quot;</value>
+            <value>&quot;冲电器 卡片打印机, 多色&quot;</value>
+            <value>&quot;冲电器 卡片打印机, 耐用&quot;</value>
+            <value>&quot;冲电器 喷墨打印机, 白色&quot;</value>
+            <value>&quot;冲电器 喷墨打印机, 多色&quot;</value>
+            <value>&quot;冲电器 喷墨打印机, 红色&quot;</value>
+            <value>&quot;冲电器 喷墨打印机, 耐用&quot;</value>
+            <value>&quot;冲电器 收据打印机, 白色&quot;</value>
+            <value>&quot;冲电器 收据打印机, 多色&quot;</value>
+            <value>&quot;冲电器 收据打印机, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;惠普&quot;'>
+            <value>&quot;惠普 传真复印机, 彩色&quot;</value>
+            <value>&quot;惠普 传真复印机, 红色&quot;</value>
+            <value>&quot;惠普 传真复印机, 每套两件&quot;</value>
+            <value>&quot;惠普 传真复印机, 数字化&quot;</value>
+            <value>&quot;惠普 传真机, 彩色&quot;</value>
+            <value>&quot;惠普 传真机, 红色&quot;</value>
+            <value>&quot;惠普 传真机, 每套两件&quot;</value>
+            <value>&quot;惠普 传真机, 数字化&quot;</value>
+            <value>&quot;惠普 复印机, 彩色&quot;</value>
+            <value>&quot;惠普 复印机, 红色&quot;</value>
+            <value>&quot;惠普 复印机, 每套两件&quot;</value>
+            <value>&quot;惠普 复印机, 数字化&quot;</value>
+            <value>&quot;惠普 个人复印机, 彩色&quot;</value>
+            <value>&quot;惠普 个人复印机, 红色&quot;</value>
+            <value>&quot;惠普 个人复印机, 每套两件&quot;</value>
+            <value>&quot;惠普 个人复印机, 数字化&quot;</value>
+            <value>&quot;惠普 墨水, 彩色&quot;</value>
+            <value>&quot;惠普 墨水, 红色&quot;</value>
+            <value>&quot;惠普 墨水, 每套两件&quot;</value>
+            <value>&quot;惠普 墨水, 数字化&quot;</value>
+            <value>&quot;惠普 无线传真机, 彩色&quot;</value>
+            <value>&quot;惠普 无线传真机, 红色&quot;</value>
+            <value>&quot;惠普 无线传真机, 每套两件&quot;</value>
+            <value>&quot;惠普 无线传真机, 数字化&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;佳能&quot;'>
+            <value>&quot;佳能 传真复印机, 彩色&quot;</value>
+            <value>&quot;佳能 传真复印机, 红色&quot;</value>
+            <value>&quot;佳能 传真复印机, 每套两件&quot;</value>
+            <value>&quot;佳能 传真复印机, 数字化&quot;</value>
+            <value>&quot;佳能 传真机, 彩色&quot;</value>
+            <value>&quot;佳能 传真机, 红色&quot;</value>
+            <value>&quot;佳能 传真机, 每套两件&quot;</value>
+            <value>&quot;佳能 传真机, 数字化&quot;</value>
+            <value>&quot;佳能 复印机, 彩色&quot;</value>
+            <value>&quot;佳能 复印机, 红色&quot;</value>
+            <value>&quot;佳能 复印机, 每套两件&quot;</value>
+            <value>&quot;佳能 复印机, 数字化&quot;</value>
+            <value>&quot;佳能 个人复印机, 彩色&quot;</value>
+            <value>&quot;佳能 个人复印机, 红色&quot;</value>
+            <value>&quot;佳能 个人复印机, 每套两件&quot;</value>
+            <value>&quot;佳能 个人复印机, 数字化&quot;</value>
+            <value>&quot;佳能 墨水, 彩色&quot;</value>
+            <value>&quot;佳能 墨水, 红色&quot;</value>
+            <value>&quot;佳能 墨水, 每套两件&quot;</value>
+            <value>&quot;佳能 墨水, 数字化&quot;</value>
+            <value>&quot;佳能 无线传真机, 彩色&quot;</value>
+            <value>&quot;佳能 无线传真机, 红色&quot;</value>
+            <value>&quot;佳能 无线传真机, 每套两件&quot;</value>
+            <value>&quot;佳能 无线传真机, 数字化&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;柯尼卡&quot;'>
+            <value>&quot;柯尼卡 打印机, 白色&quot;</value>
+            <value>&quot;柯尼卡 打印机, 多色&quot;</value>
+            <value>&quot;柯尼卡 打印机, 红色&quot;</value>
+            <value>&quot;柯尼卡 电话, 白色&quot;</value>
+            <value>&quot;柯尼卡 电话, 多色&quot;</value>
+            <value>&quot;柯尼卡 电话, 红色&quot;</value>
+            <value>&quot;柯尼卡 电话, 耐用&quot;</value>
+            <value>&quot;柯尼卡 计算器, 白色&quot;</value>
+            <value>&quot;柯尼卡 计算器, 多色&quot;</value>
+            <value>&quot;柯尼卡 计算器, 红色&quot;</value>
+            <value>&quot;柯尼卡 卡片打印机, 白色&quot;</value>
+            <value>&quot;柯尼卡 卡片打印机, 多色&quot;</value>
+            <value>&quot;柯尼卡 卡片打印机, 红色&quot;</value>
+            <value>&quot;柯尼卡 卡片打印机, 耐用&quot;</value>
+            <value>&quot;柯尼卡 喷墨打印机, 白色&quot;</value>
+            <value>&quot;柯尼卡 喷墨打印机, 红色&quot;</value>
+            <value>&quot;柯尼卡 喷墨打印机, 耐用&quot;</value>
+            <value>&quot;柯尼卡 收据打印机, 白色&quot;</value>
+            <value>&quot;柯尼卡 收据打印机, 多色&quot;</value>
+            <value>&quot;柯尼卡 收据打印机, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;罗技&quot;'>
+            <value>&quot;罗技 记忆卡, 回收&quot;</value>
+            <value>&quot;罗技 记忆卡, 可编程&quot;</value>
+            <value>&quot;罗技 记忆卡, 耐用&quot;</value>
+            <value>&quot;罗技 记忆卡, 实惠&quot;</value>
+            <value>&quot;罗技 键盘, 回收&quot;</value>
+            <value>&quot;罗技 键盘, 可编程&quot;</value>
+            <value>&quot;罗技 键盘, 耐用&quot;</value>
+            <value>&quot;罗技 键盘, 实惠&quot;</value>
+            <value>&quot;罗技 键区, 回收&quot;</value>
+            <value>&quot;罗技 键区, 可编程&quot;</value>
+            <value>&quot;罗技 键区, 耐用&quot;</value>
+            <value>&quot;罗技 键区, 实惠&quot;</value>
+            <value>&quot;罗技 路由器, 回收&quot;</value>
+            <value>&quot;罗技 路由器, 可编程&quot;</value>
+            <value>&quot;罗技 路由器, 耐用&quot;</value>
+            <value>&quot;罗技 路由器, 实惠&quot;</value>
+            <value>&quot;罗技 闪存驱动器, 回收&quot;</value>
+            <value>&quot;罗技 闪存驱动器, 可编程&quot;</value>
+            <value>&quot;罗技 闪存驱动器, 耐用&quot;</value>
+            <value>&quot;罗技 闪存驱动器, 实惠&quot;</value>
+            <value>&quot;罗技 鼠标, 回收&quot;</value>
+            <value>&quot;罗技 鼠标, 可编程&quot;</value>
+            <value>&quot;罗技 鼠标, 耐用&quot;</value>
+            <value>&quot;罗技 鼠标, 实惠&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;摩托罗拉&quot;'>
+            <value>&quot;摩托罗拉 办公室电话机, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 办公室电话机, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 办公室电话机, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 办公室电话机, 整包&quot;</value>
+            <value>&quot;摩托罗拉 充电器, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 充电器, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 充电器, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 充电器, 整包&quot;</value>
+            <value>&quot;摩托罗拉 耳机, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 耳机, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 耳机, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 耳机, 整包&quot;</value>
+            <value>&quot;摩托罗拉 信号增强器, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 信号增强器, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 信号增强器, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 信号增强器, 整包&quot;</value>
+            <value>&quot;摩托罗拉 音频基座, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 音频基座, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 音频基座, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 音频基座, 整包&quot;</value>
+            <value>&quot;摩托罗拉 智能手机, 混合尺寸&quot;</value>
+            <value>&quot;摩托罗拉 智能手机, 蓝色&quot;</value>
+            <value>&quot;摩托罗拉 智能手机, 全尺寸&quot;</value>
+            <value>&quot;摩托罗拉 智能手机, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;诺基亚&quot;'>
+            <value>&quot;诺基亚 办公室电话机, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 办公室电话机, 蓝色&quot;</value>
+            <value>&quot;诺基亚 办公室电话机, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 办公室电话机, 整包&quot;</value>
+            <value>&quot;诺基亚 充电器, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 充电器, 蓝色&quot;</value>
+            <value>&quot;诺基亚 充电器, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 充电器, 整包&quot;</value>
+            <value>&quot;诺基亚 耳机, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 耳机, 蓝色&quot;</value>
+            <value>&quot;诺基亚 耳机, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 耳机, 整包&quot;</value>
+            <value>&quot;诺基亚 信号增强器, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 信号增强器, 蓝色&quot;</value>
+            <value>&quot;诺基亚 信号增强器, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 信号增强器, 整包&quot;</value>
+            <value>&quot;诺基亚 音频基座, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 音频基座, 蓝色&quot;</value>
+            <value>&quot;诺基亚 音频基座, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 音频基座, 整包&quot;</value>
+            <value>&quot;诺基亚 智能手机, 混合尺寸&quot;</value>
+            <value>&quot;诺基亚 智能手机, 蓝色&quot;</value>
+            <value>&quot;诺基亚 智能手机, 全尺寸&quot;</value>
+            <value>&quot;诺基亚 智能手机, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;苹果&quot;'>
+            <value>&quot;苹果 办公室电话机, 混合尺寸&quot;</value>
+            <value>&quot;苹果 办公室电话机, 蓝色&quot;</value>
+            <value>&quot;苹果 办公室电话机, 全尺寸&quot;</value>
+            <value>&quot;苹果 办公室电话机, 整包&quot;</value>
+            <value>&quot;苹果 充电器, 混合尺寸&quot;</value>
+            <value>&quot;苹果 充电器, 蓝色&quot;</value>
+            <value>&quot;苹果 充电器, 全尺寸&quot;</value>
+            <value>&quot;苹果 充电器, 整包&quot;</value>
+            <value>&quot;苹果 耳机, 混合尺寸&quot;</value>
+            <value>&quot;苹果 耳机, 蓝色&quot;</value>
+            <value>&quot;苹果 耳机, 全尺寸&quot;</value>
+            <value>&quot;苹果 耳机, 整包&quot;</value>
+            <value>&quot;苹果 信号增强器, 混合尺寸&quot;</value>
+            <value>&quot;苹果 信号增强器, 蓝色&quot;</value>
+            <value>&quot;苹果 信号增强器, 全尺寸&quot;</value>
+            <value>&quot;苹果 信号增强器, 整包&quot;</value>
+            <value>&quot;苹果 音频基座, 混合尺寸&quot;</value>
+            <value>&quot;苹果 音频基座, 蓝色&quot;</value>
+            <value>&quot;苹果 音频基座, 全尺寸&quot;</value>
+            <value>&quot;苹果 音频基座, 整包&quot;</value>
+            <value>&quot;苹果 智能手机, 混合尺寸&quot;</value>
+            <value>&quot;苹果 智能手机, 蓝色&quot;</value>
+            <value>&quot;苹果 智能手机, 全尺寸&quot;</value>
+            <value>&quot;苹果 智能手机, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;三星&quot;'>
+            <value>&quot;三星 办公室电话机, 混合尺寸&quot;</value>
+            <value>&quot;三星 办公室电话机, 蓝色&quot;</value>
+            <value>&quot;三星 办公室电话机, 全尺寸&quot;</value>
+            <value>&quot;三星 办公室电话机, 整包&quot;</value>
+            <value>&quot;三星 充电器, 混合尺寸&quot;</value>
+            <value>&quot;三星 充电器, 蓝色&quot;</value>
+            <value>&quot;三星 充电器, 全尺寸&quot;</value>
+            <value>&quot;三星 充电器, 整包&quot;</value>
+            <value>&quot;三星 耳机, 混合尺寸&quot;</value>
+            <value>&quot;三星 耳机, 蓝色&quot;</value>
+            <value>&quot;三星 耳机, 全尺寸&quot;</value>
+            <value>&quot;三星 耳机, 整包&quot;</value>
+            <value>&quot;三星 信号增强器, 混合尺寸&quot;</value>
+            <value>&quot;三星 信号增强器, 蓝色&quot;</value>
+            <value>&quot;三星 信号增强器, 全尺寸&quot;</value>
+            <value>&quot;三星 信号增强器, 整包&quot;</value>
+            <value>&quot;三星 音频基座, 混合尺寸&quot;</value>
+            <value>&quot;三星 音频基座, 蓝色&quot;</value>
+            <value>&quot;三星 音频基座, 全尺寸&quot;</value>
+            <value>&quot;三星 音频基座, 整包&quot;</value>
+            <value>&quot;三星 智能手机, 混合尺寸&quot;</value>
+            <value>&quot;三星 智能手机, 蓝色&quot;</value>
+            <value>&quot;三星 智能手机, 全尺寸&quot;</value>
+            <value>&quot;三星 智能手机, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;施乐&quot;'>
+            <value>&quot;施乐 备忘录便条, 多色&quot;</value>
+            <value>&quot;施乐 备忘录便条, 回收&quot;</value>
+            <value>&quot;施乐 备忘录便条, 每包 12 个&quot;</value>
+            <value>&quot;施乐 备忘录便条, 优质&quot;</value>
+            <value>&quot;施乐 笔记本, 多色&quot;</value>
+            <value>&quot;施乐 笔记本, 回收&quot;</value>
+            <value>&quot;施乐 笔记本, 每包 12 个&quot;</value>
+            <value>&quot;施乐 笔记本, 优质&quot;</value>
+            <value>&quot;施乐 计划信息表, 多色&quot;</value>
+            <value>&quot;施乐 计划信息表, 回收&quot;</value>
+            <value>&quot;施乐 计划信息表, 每包 12 个&quot;</value>
+            <value>&quot;施乐 计划信息表, 优质&quot;</value>
+            <value>&quot;施乐 令, 多色&quot;</value>
+            <value>&quot;施乐 令, 回收&quot;</value>
+            <value>&quot;施乐 令, 每包 12 个&quot;</value>
+            <value>&quot;施乐 令, 优质&quot;</value>
+            <value>&quot;施乐 信纸, 多色&quot;</value>
+            <value>&quot;施乐 信纸, 回收&quot;</value>
+            <value>&quot;施乐 信纸, 每包 12 个&quot;</value>
+            <value>&quot;施乐 信纸, 优质&quot;</value>
+            <value>&quot;施乐 羊皮纸, 多色&quot;</value>
+            <value>&quot;施乐 羊皮纸, 回收&quot;</value>
+            <value>&quot;施乐 羊皮纸, 每包 12 个&quot;</value>
+            <value>&quot;施乐 羊皮纸, 优质&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;思科&quot;'>
+            <value>&quot;思科 办公室电话机, 混合尺寸&quot;</value>
+            <value>&quot;思科 办公室电话机, 蓝色&quot;</value>
+            <value>&quot;思科 办公室电话机, 全尺寸&quot;</value>
+            <value>&quot;思科 办公室电话机, 整包&quot;</value>
+            <value>&quot;思科 充电器, 混合尺寸&quot;</value>
+            <value>&quot;思科 充电器, 蓝色&quot;</value>
+            <value>&quot;思科 充电器, 全尺寸&quot;</value>
+            <value>&quot;思科 充电器, 整包&quot;</value>
+            <value>&quot;思科 耳机, 混合尺寸&quot;</value>
+            <value>&quot;思科 耳机, 蓝色&quot;</value>
+            <value>&quot;思科 耳机, 全尺寸&quot;</value>
+            <value>&quot;思科 耳机, 整包&quot;</value>
+            <value>&quot;思科 信号增强器, 混合尺寸&quot;</value>
+            <value>&quot;思科 信号增强器, 蓝色&quot;</value>
+            <value>&quot;思科 信号增强器, 全尺寸&quot;</value>
+            <value>&quot;思科 信号增强器, 整包&quot;</value>
+            <value>&quot;思科 音频基座, 混合尺寸&quot;</value>
+            <value>&quot;思科 音频基座, 蓝色&quot;</value>
+            <value>&quot;思科 音频基座, 全尺寸&quot;</value>
+            <value>&quot;思科 音频基座, 整包&quot;</value>
+            <value>&quot;思科 智能手机, 混合尺寸&quot;</value>
+            <value>&quot;思科 智能手机, 蓝色&quot;</value>
+            <value>&quot;思科 智能手机, 全尺寸&quot;</value>
+            <value>&quot;思科 智能手机, 整包&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;松下&quot;'>
+            <value>&quot;松下 打印机, 白色&quot;</value>
+            <value>&quot;松下 打印机, 红色&quot;</value>
+            <value>&quot;松下 打印机, 耐用&quot;</value>
+            <value>&quot;松下 电话, 白色&quot;</value>
+            <value>&quot;松下 电话, 多色&quot;</value>
+            <value>&quot;松下 电话, 红色&quot;</value>
+            <value>&quot;松下 电话, 耐用&quot;</value>
+            <value>&quot;松下 计算器, 白色&quot;</value>
+            <value>&quot;松下 计算器, 多色&quot;</value>
+            <value>&quot;松下 计算器, 红色&quot;</value>
+            <value>&quot;松下 计算器, 耐用&quot;</value>
+            <value>&quot;松下 卡片打印机, 多色&quot;</value>
+            <value>&quot;松下 卡片打印机, 红色&quot;</value>
+            <value>&quot;松下 卡片打印机, 耐用&quot;</value>
+            <value>&quot;松下 喷墨打印机, 白色&quot;</value>
+            <value>&quot;松下 喷墨打印机, 多色&quot;</value>
+            <value>&quot;松下 喷墨打印机, 红色&quot;</value>
+            <value>&quot;松下 喷墨打印机, 耐用&quot;</value>
+            <value>&quot;松下 收据打印机, 白色&quot;</value>
+            <value>&quot;松下 收据打印机, 多色&quot;</value>
+            <value>&quot;松下 收据打印机, 红色&quot;</value>
+            <value>&quot;松下 收据打印机, 耐用&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;夏普&quot;'>
+            <value>&quot;夏普 传真复印机, 彩色&quot;</value>
+            <value>&quot;夏普 传真复印机, 红色&quot;</value>
+            <value>&quot;夏普 传真复印机, 每套两件&quot;</value>
+            <value>&quot;夏普 传真复印机, 数字化&quot;</value>
+            <value>&quot;夏普 传真机, 彩色&quot;</value>
+            <value>&quot;夏普 传真机, 每套两件&quot;</value>
+            <value>&quot;夏普 传真机, 数字化&quot;</value>
+            <value>&quot;夏普 复印机, 彩色&quot;</value>
+            <value>&quot;夏普 复印机, 红色&quot;</value>
+            <value>&quot;夏普 复印机, 每套两件&quot;</value>
+            <value>&quot;夏普 复印机, 数字化&quot;</value>
+            <value>&quot;夏普 个人复印机, 彩色&quot;</value>
+            <value>&quot;夏普 个人复印机, 红色&quot;</value>
+            <value>&quot;夏普 个人复印机, 每套两件&quot;</value>
+            <value>&quot;夏普 个人复印机, 数字化&quot;</value>
+            <value>&quot;夏普 墨水, 彩色&quot;</value>
+            <value>&quot;夏普 墨水, 红色&quot;</value>
+            <value>&quot;夏普 墨水, 每套两件&quot;</value>
+            <value>&quot;夏普 墨水, 数字化&quot;</value>
+            <value>&quot;夏普 无线传真机, 彩色&quot;</value>
+            <value>&quot;夏普 无线传真机, 红色&quot;</value>
+            <value>&quot;夏普 无线传真机, 每套两件&quot;</value>
+            <value>&quot;夏普 无线传真机, 数字化&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;宜家&quot;'>
+            <value>&quot;宜家 搁架, 白色&quot;</value>
+            <value>&quot;宜家 搁架, 传统&quot;</value>
+            <value>&quot;宜家 搁架, 黑色&quot;</value>
+            <value>&quot;宜家 搁架, 金属&quot;</value>
+            <value>&quot;宜家 古典书架, 白色&quot;</value>
+            <value>&quot;宜家 古典书架, 传统&quot;</value>
+            <value>&quot;宜家 古典书架, 黑色&quot;</value>
+            <value>&quot;宜家 古典书架, 金属&quot;</value>
+            <value>&quot;宜家 柜, 白色&quot;</value>
+            <value>&quot;宜家 柜, 传统&quot;</value>
+            <value>&quot;宜家 柜, 黑色&quot;</value>
+            <value>&quot;宜家 柜, 金属&quot;</value>
+            <value>&quot;宜家 墙角架, 白色&quot;</value>
+            <value>&quot;宜家 墙角架, 传统&quot;</value>
+            <value>&quot;宜家 墙角架, 黑色&quot;</value>
+            <value>&quot;宜家 墙角架, 金属&quot;</value>
+            <value>&quot;宜家 书架, 白色&quot;</value>
+            <value>&quot;宜家 书架, 传统&quot;</value>
+            <value>&quot;宜家 书架, 黑色&quot;</value>
+            <value>&quot;宜家 书架, 金属&quot;</value>
+            <value>&quot;宜家 书库, 白色&quot;</value>
+            <value>&quot;宜家 书库, 传统&quot;</value>
+            <value>&quot;宜家 书库, 黑色&quot;</value>
+            <value>&quot;宜家 书库, 金属&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[产品名称]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='利润 (级)' datatype='integer' name='[利润 (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[利润]' peg='0' size-parameter='[Parameters].[Parameter 2]' />
+      </column>
+      <column datatype='real' default-format='c&quot;￥&quot;#,##0' name='[利润]' role='measure' type='quantitative' />
+      <column datatype='string' name='[国家]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column datatype='string' name='[城市]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='客户 Id' datatype='string' hidden='true' name='[客户 ID]' role='dimension' type='nominal' />
+      <column datatype='string' name='[客户名称]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' default-format='p0%' name='[折扣]' role='measure' type='quantitative' />
+      <column datatype='integer' default-format='n#,##0' name='[数量]' role='measure' type='quantitative' />
+      <column datatype='string' name='[省/自治区]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='行 Id' datatype='integer' hidden='true' name='[行 ID]' role='dimension' type='ordinal' />
+      <column caption='订单 Id' datatype='string' name='[订单 ID]' role='dimension' type='nominal' />
+      <column datatype='real' default-format='c&quot;￥&quot;#,##0' name='[销售额]' role='measure' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <group caption='利润排名前列的客户' name='[Set 1]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='SUM([利润])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[客户名称]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='产品'>
+          <field>[类别]</field>
+          <field>[子类别]</field>
+          <field>[产品名称 (group) 1]</field>
+          <field>[产品名称]</field>
+        </drill-path>
+        <drill-path name='地点'>
+          <field>[国家]</field>
+          <field>[省/自治区]</field>
+          <field>[城市]</field>
+        </drill-path>
+      </drill-paths>
+      <folder name='客户' role='dimensions'>
+        <folder-item name='[客户名称]' type='field' />
+        <folder-item name='[细分]' type='field' />
+      </folder>
+      <folder name='订单' role='dimensions'>
+        <folder-item name='[发货日期]' type='field' />
+        <folder-item name='[订单 ID]' type='field' />
+        <folder-item name='[订单日期]' type='field' />
+        <folder-item name='[邮寄方式]' type='field' />
+      </folder>
+      <layout dim-ordering='alphabetic' dim-percentage='0.498428' group-percentage='0.0518868' measure-ordering='alphabetic' measure-percentage='0.352201' parameter-percentage='0.0974843' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='选择利润前多少名客户' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+          <calculation class='tableau' formula='5' />
+          <range granularity='5' max='20' min='5' />
+        </column>
+        <column caption='利润容器大小' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='200'>
+          <calculation class='tableau' formula='200' />
+          <range granularity='50' max='200' min='50' />
+        </column>
+      </datasource-dependencies>
+      <filter class='categorical' column='[城市]' filter-group='2'>
+        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+          <groupfilter function='level-members' level='[城市]' />
+          <groupfilter function='member' level='[城市]' member='&quot;大同&quot;' />
+        </groupfilter>
+      </filter>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='1卷第二题折线图'>
+      <table>
+        <view>
+          <datasources>
+            <datasource name='示例 - 超市' />
+          </datasources>
+          <datasource-dependencies datasource='示例 - 超市'>
+            <column-instance column='[订单日期]' derivation='Month' name='[mn:订单日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[销售额]' derivation='Sum' name='[sum:销售额:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' name='[订单日期]' role='dimension' type='ordinal' />
+            <column datatype='real' default-format='c&quot;￥&quot;#,##0' name='[销售额]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[示例 - 超市].[sum:销售额:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[示例 - 超市].[sum:销售额:qk]' value='n#,##0,.00K;-#,##0,.00K' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[示例 - 超市].[sum:销售额:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[示例 - 超市].[sum:销售额:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([示例 - 超市].[sum:销售额:qk] + [示例 - 超市].[sum:销售额:qk])</rows>
+        <cols>[示例 - 超市].[mn:订单日期:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='1卷第二题折线图'>
+      <cards>
+        <edge name='left'>
+          <strip size='130'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference duplicate-index='1'>
+                <axis>[示例 - 超市].[sum:销售额:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[示例 - 超市].[yr:订单日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DA04244F-F825-407E-AE3C-F6E075B0C6A2}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='1卷第二题折线图' width='192'>
+      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
+      p4RMGQAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
