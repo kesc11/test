@@ -1,0 +1,5 @@
+JSONArray JSONArray = new JSONArray(json2);
+For(int i = 0 ; I < jsonArray.length() ; i++){
+JSONObject jsonObj = jsonArray.getJSONObject(i);
+String name = jsonObj.optString(“name”);
+Int age = jsonObj.optInt(“age”);

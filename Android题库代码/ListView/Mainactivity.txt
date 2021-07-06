@@ -1,0 +1,41 @@
+package com.liuke.fifth;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    String[] listitem = {"北京", "天津", "上海", "深圳", "广东","杭州","重庆","武汉","郑州","浙江","新乡","周口"};
+    ListView lv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        lv = (ListView) findViewById(R.id.lv);
+        //适配器
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,listitem);
+        
+        lv.setAdapter(adapter);
+        //绑定单击事件
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String str = ((TextView) view).getText().toString();
+                Toast.makeText(MainActivity.this, "你选择的城市为："+str, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+}
